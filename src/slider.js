@@ -12,6 +12,7 @@ const Slider = () => {
   useEffect(() => {
     initSlider();
     bindEventHandler();
+    handleResize();
   }, []);
 
   const initSlider = () => {
@@ -26,6 +27,17 @@ const Slider = () => {
     sliderRef.current.addEventListener("scroll", moveSlides);
     // Handle click event on nav elements
     sliderNavRef.current.addEventListener("click", handleClick);
+    // Resize carousel when window changes
+    window.addEventListener("resize", handleResize);
+  };
+
+  const handleResize = () => {
+    slideWidth = sliderRef.current.offsetWidth;
+    sliderRef.current.scrollTo({
+      left:
+        document.querySelector(".slider__anchor--active").innerText *
+        slideWidth,
+    });
   };
 
   const moveSlides = (event) => {
@@ -46,6 +58,7 @@ const Slider = () => {
     event.preventDefault();
 
     // Get number from id
+    initSlider();
     const position = parseInt(
       event.target.getAttribute("href").split("-").pop(),
       10
@@ -66,32 +79,27 @@ const Slider = () => {
   };
 
   return (
-    <div>
+    <div className="slider-parent">
       <section className="wrapper__slider">
         {/* Slider Content */}
         <div className="slider" id="slider" ref={sliderRef}>
           <div className="slider__holder">
+            <h1>The First Nighter African Violet Society of Dallas</h1>
             <figure
               className="slider__slide"
               id="slide-0"
               ref={sliderSlidesRef}
-            >
-              <figcaption>first slide</figcaption>
-            </figure>
+            ></figure>
             <figure
               className="slider__slide"
               id="slide-1"
               ref={sliderSlidesRef}
-            >
-              <figcaption>second slide</figcaption>
-            </figure>
+            ></figure>
             <figure
               className="slider__slide"
               id="slide-2"
               ref={sliderSlidesRef}
-            >
-              <figcaption>third slide</figcaption>
-            </figure>
+            ></figure>
           </div>
           {/* Slider Navigation */}
           <nav className="slider__nav" ref={sliderNavRef}>

@@ -5,6 +5,8 @@ const Slider = () => {
   const sliderSlidesRef = useRef(null);
   const sliderNavRef = useRef(null);
   const sliderNavElementsRef = useRef(null);
+  const progressRef = useRef(null);
+  let tracker = 0;
 
   let slideWidth;
   let offset;
@@ -13,6 +15,7 @@ const Slider = () => {
     initSlider();
     bindEventHandler();
     handleResize();
+    loadBar();
   }, []);
 
   const initSlider = () => {
@@ -69,6 +72,7 @@ const Slider = () => {
     });
 
     setActive(event.target);
+    tracker = position;
   };
 
   const setActive = (element) => {
@@ -78,13 +82,38 @@ const Slider = () => {
     element.classList.add("slider__anchor--active");
   };
 
+  const loadBar = () => {
+    setInterval(() => {
+      if (progressRef.current.style.getPropertyValue("--width") >= 100) {
+        initSlider();
+        tracker < 2 ? tracker++ : (tracker = 0);
+        sliderRef.current.scrollTo({
+          left: tracker * slideWidth,
+          behavior: "smooth",
+        });
+        setActive(document.querySelectorAll(".slider__anchor")[tracker]);
+        return progressRef.current.style.setProperty("--width", 0);
+      }
+      const computedStyle = getComputedStyle(progressRef.current);
+      const width = parseFloat(computedStyle.getPropertyValue("--width")) || 0;
+      progressRef.current.style.setProperty("--width", width + 0.1);
+    }, 20);
+  };
+
   return (
     <div className="slider-parent">
       <section className="wrapper__slider">
         {/* Slider Content */}
         <div className="slider" id="slider" ref={sliderRef}>
           <div className="slider__holder">
-            <h1>The First Nighter African Violet Society of Dallas</h1>
+            <h1>
+              The First Nighter <br /> African Violet Society of{" "}
+              <span className="italic">Dallas</span>
+            </h1>
+            <p>
+              Promoting and Studying African Violets Since{" "}
+              <span className="italic">1955</span>.
+            </p>
             <figure
               className="slider__slide"
               id="slide-0"
@@ -130,6 +159,7 @@ const Slider = () => {
         {/* END Slider Content*/}
       </section>
       {/*END Slider Element</div> */}
+      <div className="progress-bar" ref={progressRef}></div>
     </div>
   );
 };

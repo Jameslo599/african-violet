@@ -2,6 +2,7 @@ import "./App.scss";
 import logo from "./images/logo.png";
 import MenuToClose from "./images/icons/menu-to-close";
 import Slider from "./slider";
+//import Progress from "./progress";
 
 function App() {
   return (

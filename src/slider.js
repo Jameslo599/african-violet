@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
 
+//Slideshow with progress bar
 const Slider = () => {
   const sliderRef = useRef(null);
   const sliderSlidesRef = useRef(null);
   const sliderNavRef = useRef(null);
   const sliderNavElementsRef = useRef(null);
   const progressRef = useRef(null);
-  let tracker = 0;
 
+  let tracker = 0;
   let slideWidth;
   let offset;
 
@@ -75,6 +76,7 @@ const Slider = () => {
     tracker = position;
   };
 
+  //Highlight selected button
   const setActive = (element) => {
     document
       .querySelectorAll(".slider__anchor")
@@ -82,6 +84,7 @@ const Slider = () => {
     element.classList.add("slider__anchor--active");
   };
 
+  //Fill progress gauge
   const loadBar = () => {
     setInterval(() => {
       if (progressRef.current.style.getPropertyValue("--width") >= 100) {
@@ -97,7 +100,7 @@ const Slider = () => {
       const computedStyle = getComputedStyle(progressRef.current);
       const width = parseFloat(computedStyle.getPropertyValue("--width")) || 0;
       progressRef.current.style.setProperty("--width", width + 0.1);
-    }, 20);
+    }, 15);
   };
 
   return (
@@ -111,7 +114,7 @@ const Slider = () => {
               <span className="italic">Dallas</span>
             </h1>
             <p>
-              Promoting and Studying African Violets Since{" "}
+              Promoting and Loving African Violets Since{" "}
               <span className="italic">1955</span>.
             </p>
             <figure

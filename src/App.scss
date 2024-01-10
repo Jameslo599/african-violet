@@ -165,7 +165,6 @@ html {
         flex: 1;
         height: 100%;
         position: relative;
-        //background-attachment: fixed;
         background-position: center;
         background-size: cover;
       }
@@ -243,8 +242,89 @@ html {
     width: calc(var(--width, 0) * 1%);
     min-width: 0%;
     max-width: 100%;
-    background-color: #b383bf;
+    background-color: #330066;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+  }
+}
+
+//Calendar
+.calendar-container {
+  width: 100%;
+  height: 300px;
+  background-color: #b383bf;
+  position: relative;
+  z-index: 10;
+}
+.calendar {
+  @include flexContainer(row, flex-start, center);
+  width: inherit;
+  height: inherit;
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  transition: all 0.2s;
+  transform: scale(0.98);
+  a {
+    color: #fff;
+    text-decoration: none;
+    min-width: 200px;
+    margin: 0 24px;
+  }
+  &.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+  .calendar-item {
+    @include flexContainer(column, space-evenly, flex-start);
+    min-width: 200px;
+    height: 200px;
+    padding: 0 12px;
+    border-radius: 6px;
+    background: transparent;
+    position: relative;
+    z-index: -10;
+    h2,
+    span {
+      margin: 6px 0;
+    }
+    h2 {
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+    span {
+      font-size: 1rem;
+    }
+    figure {
+      background-image: url(./images/calendar1.webp);
+      background-size: contain;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: 2px solid #330066;
+      border-radius: 6px;
+      z-index: -1000;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        border-radius: 6px;
+        background: linear-gradient(transparent, #00000052 100%);
+      }
+    }
+    &:hover {
+      h2 {
+        text-decoration: underline;
+      }
+    }
   }
 }

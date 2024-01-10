@@ -2,12 +2,14 @@ import "./App.scss";
 import logo from "./images/logo.png";
 import MenuToClose from "./images/icons/menu-to-close";
 import Slider from "./slider";
+import Calendar from "./calendar";
 
 function App() {
   return (
     <div className="App">
       <MyHeader />
       <Slider />
+      <Calendar />
       <div className="dummy"></div>
     </div>
   );

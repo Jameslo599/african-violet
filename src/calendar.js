@@ -52,35 +52,77 @@ const Calendar = () => {
 
   return (
     <div className="calendar-container">
+      <h2>Upcoming Events</h2>
       <div className="calendar" ref={calendarRef}>
         <a>
           <div className="calendar-item" ref={itemsRef.current[0]}>
-            <h2>Dallas Metro Trio Fall Sale</h2>
-            <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
-            <span>September 22-23, 2023</span>
-            <span>9 a.m.-4 p.m.</span>
-            <figure></figure>
+            <h3>First African Violet Society of Denton Show & Sale</h3>
+            <span>
+              First Presbyterian Church, 1114 West University Denton, TX
+            </span>
+            <span>March 14 - 16, 2024</span>
+            <span>“Violets Take Over the World”</span>
+            <figure className="f-1"></figure>
           </div>
         </a>
-
-        <div className="calendar-item" ref={itemsRef.current[1]}>
-          1
-        </div>
-        <div className="calendar-item" ref={itemsRef.current[2]}>
-          1
-        </div>
-        <div className="calendar-item" ref={itemsRef.current[3]}>
-          1
-        </div>
-        <div className="calendar-item" ref={itemsRef.current[4]}>
-          1
-        </div>
-        <div className="calendar-item" ref={itemsRef.current[5]}>
-          1
-        </div>
-        <div className="calendar-item" ref={itemsRef.current[6]}>
-          1
-        </div>
+        <a>
+          <div className="calendar-item" ref={itemsRef.current[0]}>
+            <h3>Dallas Metro AV Societies Spring Sale</h3>
+            <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
+            <span>March 22-23, 2024</span>
+            <span>9 am – 4 pm</span>
+            <figure className="f-2"></figure>
+          </div>
+        </a>
+        <a>
+          <div className="calendar-item" ref={itemsRef.current[0]}>
+            <h3>Moonlight African Violet and Gesneriad Society Plant Sale</h3>
+            <span>
+              Fort Worth Botanical Gardens, 3220 Botanic Garden Blvd., Fort
+              Worth
+            </span>
+            <span>April 5, 2024, 2 pm - 6 pm</span>
+            <span>April 6, 2024, 2 am – 2 pm</span>
+            <figure className="f-3"></figure>
+          </div>
+        </a>
+        <a>
+          <div className="calendar-item" ref={itemsRef.current[0]}>
+            <h3>AVSA National Convention</h3>
+            <span>
+              DoubleTree Phoenix Tempe 2100 S. Priest Dr., Tempe, AZ 85282
+            </span>
+            <span>April 21 - 28, 2024</span>
+            <span>“Spirit of the Southwest”</span>
+            <figure className="f-1"></figure>
+          </div>
+        </a>
+        <a>
+          <div className="calendar-item" ref={itemsRef.current[0]}>
+            <h3>
+              Moonlight African Violet and Gesneriad Society Violet Display &
+              Sale
+            </h3>
+            <span>
+              Fort Worth Botanical Gardens, 3220 Botanic Garden Blvd., Fort
+              Worth
+            </span>
+            <span>May 4, 2024</span>
+            <span>9 am – 4 pm</span>
+            <figure className="f-2"></figure>
+          </div>
+        </a>
+        <a>
+          <div className="calendar-item" ref={itemsRef.current[0]}>
+            <h3>Summer Workshop</h3>
+            <span>
+              First Presbyterian Church 1114 West University, Denton, TX
+            </span>
+            <span>June 22, 2024</span>
+            <span>Bring a potluck dish to share.</span>
+            <figure className="f-3"></figure>
+          </div>
+        </a>
       </div>
     </div>
   );

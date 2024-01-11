@@ -29,6 +29,10 @@ const Slider = () => {
   const bindEventHandler = () => {
     // Handle scroll event on slider
     sliderRef.current.addEventListener("scroll", moveSlides);
+    sliderRef.current.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log(12);
+    });
     // Handle click event on nav elements
     sliderNavRef.current.addEventListener("click", handleClick);
     // Resize carousel when window changes

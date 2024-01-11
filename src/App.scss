@@ -83,14 +83,14 @@ html {
 //Navbar
 .header-container {
   position: sticky;
-  top: -70px;
+  top: 0px;
   z-index: 1000;
 }
 .header {
   height: 72px;
   padding: 12px 24px;
   border-bottom: solid 2px #330066;
-  background-color: #fff;
+  background-color: #ffffff;
   nav {
     @include flexContainer(row, space-between, center);
     max-width: 1170px;
@@ -250,58 +250,93 @@ html {
 
 //Calendar
 .calendar-container {
+  @include flexContainer(column, center, flex-start);
   width: 100%;
-  height: 300px;
-  background-color: #b383bf;
+  height: 400px;
+  padding: 12px 0;
+  background-color: #e1d2a3;
   position: relative;
   z-index: 10;
+  h2 {
+    color: #333;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-decoration: underline;
+    padding-left: 24px;
+    margin: 12px 0;
+  }
 }
 .calendar {
   @include flexContainer(row, flex-start, center);
   width: inherit;
-  height: inherit;
+  height: 300px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 24px;
   overflow: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
+  @include md() {
+    scroll-snap-type: none;
+  }
   &::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
   }
-  transition: all 0.2s;
-  transform: scale(0.98);
+
   a {
     color: #fff;
     text-decoration: none;
-    min-width: 200px;
-    margin: 0 24px;
+    width: 250px;
+    margin: 0 12px;
+    transition: all 0.2s;
+    transform: scale(1);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:first-child {
+      margin-left: 24px;
+    }
+    &:last-child {
+      margin-right: 24px;
+    }
   }
   &.active {
     cursor: grabbing;
     cursor: -webkit-grabbing;
-    transform: scale(1);
   }
   .calendar-item {
     @include flexContainer(column, space-evenly, flex-start);
-    min-width: 200px;
-    height: 200px;
+    width: inherit;
+    height: 250px;
     padding: 0 12px;
     border-radius: 6px;
     background: transparent;
     position: relative;
     z-index: -10;
-    h2,
+    scroll-snap-align: start;
+
+    h3,
     span {
       margin: 6px 0;
     }
-    h2 {
+    h3 {
       font-style: italic;
       font-size: 1.5rem;
     }
     span {
       font-size: 1rem;
     }
-    figure {
+    .f-1 {
       background-image: url(./images/calendar1.webp);
-      background-size: contain;
+    }
+    .f-2 {
+      background-image: url(./images/calendar2.webp);
+    }
+    .f-3 {
+      background-image: url(./images/calendar3.webp);
+    }
+    figure {
+      background-size: cover;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -318,11 +353,11 @@ html {
         width: inherit;
         height: inherit;
         border-radius: 6px;
-        background: linear-gradient(transparent, #00000052 100%);
+        background: #643f98b5;
       }
     }
     &:hover {
-      h2 {
+      h3 {
         text-decoration: underline;
       }
     }

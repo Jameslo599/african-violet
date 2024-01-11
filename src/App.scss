@@ -79,6 +79,9 @@ html {
 .italic {
   font-style: italic;
 }
+.App > *:not(:first-child) {
+  position: relative;
+}
 
 //Navbar
 .header-container {
@@ -114,7 +117,7 @@ html {
 }
 
 .dummy {
-  height: 2000px;
+  height: 500px;
   background-color: burlywood;
   position: relative;
 }
@@ -259,7 +262,7 @@ html {
   z-index: 10;
   h2 {
     color: #333;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 600;
     text-decoration: underline;
     padding-left: 24px;
@@ -320,11 +323,11 @@ html {
       margin: 6px 0;
     }
     h3 {
-      font-style: italic;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: 500;
     }
     span {
-      font-size: 1rem;
+      font-size: 1.125rem;
     }
     .f-1 {
       background-image: url(./images/calendar1.webp);
@@ -361,5 +364,55 @@ html {
         text-decoration: underline;
       }
     }
+  }
+}
+
+//Logo Strip
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.logos {
+  max-width: 1440px;
+  background-color: #fff;
+  padding: 30px 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  &:hover {
+    .logos-slide {
+      animation-play-state: paused;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+    content: "";
+    z-index: 9;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+    content: "";
+    z-index: 9;
+  }
+  .logos-slide {
+    display: inline-block;
+    animation: 14s slide infinite linear;
+  }
+  img {
+    height: 40px;
+    margin: 0 24px;
   }
 }

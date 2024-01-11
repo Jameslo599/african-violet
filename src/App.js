@@ -3,6 +3,7 @@ import logo from "./images/logo.png";
 import MenuToClose from "./images/icons/menu-to-close";
 import Slider from "./slider";
 import Calendar from "./calendar";
+import Logo from "./logo-strip";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <MyHeader />
       <Slider />
       <Calendar />
+      <Logo />
       <div className="dummy"></div>
     </div>
   );

@@ -61,7 +61,7 @@ const Calendar = () => {
               First Presbyterian Church, 1114 West University Denton, TX
             </span>
             <span>March 14 - 16, 2024</span>
-            <span>“Violets Take Over the World”</span>
+            <span className="italic">“Violets Take Over the World”</span>
             <figure className="f-1"></figure>
           </div>
         </a>
@@ -93,7 +93,7 @@ const Calendar = () => {
               DoubleTree Phoenix Tempe 2100 S. Priest Dr., Tempe, AZ 85282
             </span>
             <span>April 21 - 28, 2024</span>
-            <span>“Spirit of the Southwest”</span>
+            <span className="italic">“Spirit of the Southwest”</span>
             <figure className="f-1"></figure>
           </div>
         </a>
@@ -119,7 +119,7 @@ const Calendar = () => {
               First Presbyterian Church 1114 West University, Denton, TX
             </span>
             <span>June 22, 2024</span>
-            <span>Bring a potluck dish to share.</span>
+            <span className="italic">Bring a potluck dish to share.</span>
             <figure className="f-3"></figure>
           </div>
         </a>

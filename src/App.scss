@@ -487,7 +487,7 @@ html {
 
 //Footer
 .footer {
-  padding: 30px 12px;
+  padding: 30px 24px;
   background-color: #f9f7f4;
   h3 {
     text-align: center;
@@ -537,14 +537,13 @@ html {
     // }
   }
   .gov {
-    @include flexContainer(row, flex-start, flex-start);
+    @include flexContainer(row, space-evenly, flex-start);
     margin-top: 24px;
     img {
       height: 36px;
       padding-right: 24px;
     }
     span {
-      width: 100%;
       font-size: 1rem;
       font-weight: 500;
       text-align: center;

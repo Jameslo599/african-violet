@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import ArrowRight from "./images/icons/arrow-right";
 
 //Horizontal photo calendar
 const Calendar = () => {
@@ -52,7 +53,9 @@ const Calendar = () => {
 
   return (
     <div className="calendar-container">
-      <h2>Upcoming Events</h2>
+      <h2>
+        Upcoming Events <ArrowRight />
+      </h2>
       <div className="calendar" ref={calendarRef}>
         <a>
           <div className="calendar-item" ref={itemsRef.current[0]}>

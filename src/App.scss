@@ -92,8 +92,8 @@ html {
 .header {
   height: 72px;
   padding: 12px 24px;
-  border-bottom: solid 2px #330066;
-  background-color: #ffffff;
+  border-bottom: solid 1px #330066;
+  background-color: #f9f7f4;
   nav {
     @include flexContainer(row, space-between, center);
     max-width: 1170px;
@@ -116,12 +116,6 @@ html {
   }
 }
 
-.dummy {
-  height: 500px;
-  background-color: burlywood;
-  position: relative;
-}
-
 //Slider
 .slider-parent {
   position: sticky;
@@ -136,7 +130,6 @@ html {
     @include sm() {
       min-height: calc(100vh - 51vh);
     }
-    background-color: black;
     overflow: hidden;
     .slider__holder {
       height: 100%;
@@ -155,12 +148,12 @@ html {
         width: 100%;
         font-size: 2rem;
         font-weight: 500;
-        padding: 32px 24px;
+        padding: 24px 24px;
         z-index: 100;
       }
       p {
         font-size: 1.1rem;
-        bottom: 70px;
+        bottom: 60px;
         font-weight: 400;
       }
       .slider__slide {
@@ -178,7 +171,14 @@ html {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(transparent 0%, #00000089 100%);
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          35deg,
+          rgba(2, 0, 36, 0.9248949579831933) 0%,
+          rgba(42, 42, 42, 0.553) 35%,
+          rgba(42, 42, 42, 0.318) 70%,
+          rgba(255, 255, 255, 0) 100%
+        );
       }
       #slide-0 {
         background-image: url(./images/slide1.webp);
@@ -263,11 +263,16 @@ html {
   h2 {
     color: #333;
     font-size: 2rem;
-    font-weight: 600;
-    text-decoration: underline;
+    font-weight: 500;
+    font-style: italic;
     padding-left: 24px;
     margin: 12px 0;
   }
+}
+.arrow-right {
+  width: 20px;
+  margin-left: 6px;
+  vertical-align: sub;
 }
 .calendar {
   @include flexContainer(row, flex-start, center);
@@ -356,12 +361,75 @@ html {
         width: inherit;
         height: inherit;
         border-radius: 6px;
-        background: #643f98b5;
+        background: rgb(100, 63, 152);
+        background: linear-gradient(
+          45deg,
+          rgba(100, 63, 152, 0.923) 0%,
+          rgba(116, 66, 187, 0.712) 35%,
+          rgba(116, 66, 187, 0.597) 70%,
+          rgba(255, 255, 255, 0) 100%
+        );
       }
     }
     &:hover {
       h3 {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+//Core Values
+.values-container {
+  height: 300px;
+  width: 100%;
+  figure {
+    position: absolute;
+    z-index: -3;
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-image: url("./images/values.webp");
+    background-size: cover;
+    background-position: center;
+    &::before {
+      content: "";
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        35deg,
+        rgba(2, 0, 36, 0.9248949579831933) 0%,
+        rgba(42, 42, 42, 0.745) 35%,
+        rgba(42, 42, 42, 0.318) 70%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+
+  > div {
+    @include flexContainer(column, space-evenly, center);
+    height: inherit;
+    width: inherit;
+    padding: 0 24px;
+    div {
+      @include flexContainer(column, space-between, flex-start);
+      color: #fff;
+      text-align: left;
+      span {
+        font-size: 1.1rem;
+      }
+      h3 {
+        margin-bottom: 12px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        span {
+          font-size: inherit;
+        }
       }
     }
   }
@@ -414,5 +482,82 @@ html {
   img {
     height: 40px;
     margin: 0 24px;
+  }
+}
+
+//Footer
+.footer {
+  padding: 30px 12px;
+  background-color: #f9f7f4;
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 24px;
+    text-align: center;
+  }
+  .schedule {
+    margin: 24px 0;
+    line-height: 1.25rem;
+  }
+  .footer-list-1 {
+    > li {
+      font-size: 0.875rem;
+      font-weight: 600;
+      > ul {
+        display: none;
+      }
+    }
+    button {
+      padding: 0;
+      background-color: transparent;
+    }
+    .expand {
+      width: 0.7rem;
+      margin-right: 2px;
+    }
+  }
+  .footer-list-2 {
+    border-top: 1px solid #333;
+    // li:first-child {
+    //   border: 0;
+    // }
+    // li {
+    //   font-size: 0.75rem;
+    //   font-weight: 500;
+    // }
+    // button {
+    //   background-color: transparent;
+    //   padding: 0;
+    // }
+  }
+  .gov {
+    @include flexContainer(row, flex-start, flex-start);
+    margin-top: 24px;
+    img {
+      height: 36px;
+      padding-right: 24px;
+    }
+    span {
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      a {
+        display: block;
+        font-weight: 600;
+        color: #330066;
+        text-decoration: none;
+        &:hover {
+          color: #330066c8;
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }

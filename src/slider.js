@@ -118,8 +118,8 @@ const Slider = () => {
               <span className="italic">Dallas</span>
             </h1>
             <p>
-              Promoting and Loving African Violets Since{" "}
-              <span className="italic">1955</span>.
+              Passionate and Excited About African Violets Since{" "}
+              <span className="italic">November 9, 1955</span>.
             </p>
             <figure
               className="slider__slide"

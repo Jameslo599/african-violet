@@ -4,6 +4,7 @@ import tx from "./images/lone-star.jpg";
 import MenuToClose from "./images/icons/menu-to-close";
 import Slider from "./slider";
 import Calendar from "./calendar";
+import Values from "./values";
 import Logo from "./logo-strip";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <MyHeader />
       <Slider />
       <Calendar />
-      <MyValues />
+      <Values />
       <Logo />
       <div className="dummy"></div>
       <MyFooter />
@@ -35,34 +36,6 @@ function MyHeader() {
           </div>
         </nav>
       </header>
-    </div>
-  );
-}
-
-function MyValues() {
-  return (
-    <div className="values-container">
-      <div>
-        <div>
-          <h3>
-            Our <span className="italic">Aim</span>
-          </h3>
-          <span>
-            To promote widespread interest in African Violets and to study their
-            growth habits.
-          </span>
-        </div>
-        <div>
-          <h3>
-            Our <span className="italic">Purpose</span>
-          </h3>
-          <span>
-            To offer a beneficial association to those interested in African
-            Violet culture.
-          </span>
-        </div>
-        <figure></figure>
-      </div>
     </div>
   );
 }

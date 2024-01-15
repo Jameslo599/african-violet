@@ -42,46 +42,70 @@ function MyHeader() {
 
 function MyFooter() {
   return (
-    <div>
+    <div className="footer-container">
       <footer className="footer">
         <div>
           <h3>Meeting Information</h3>
-          <p className="schedule">
-            Every Third Monday
-            <br />
-            January - May & September - November
-            <br />
-            6:30-7:00 p.m. Social Time <br />
-            7:00-8:30 p.m. Business Meeting & Program
-            <br />
-            McKinney Fire Station 5, Community Room 6600 Virginia Parkway,
-            McKinney, TX
-          </p>
+          <div className="schedule">
+            <div>
+              <span>Every Third Monday</span>
+              <span>January - May & September - November</span>
+            </div>
+            <div>
+              <span>6:30-7:00 p.m. Social Time</span>
+              <span>7:00-8:30 p.m. Business Meeting & Program</span>
+            </div>
+            <div>
+              <span>McKinney Fire Station 5, Community Room</span>
+              <span>6600 Virginia Parkway, McKinney, TX</span>
+            </div>
+          </div>
+          <div className="schedule-wide">
+            <div>
+              <span>Every Third Monday</span>
+              <span>January - May</span>
+              <span>September - November</span>
+            </div>
+            <div>
+              <span>Social Time</span>
+              <span>6:30-7:00 p.m.</span>
+              <span>Business Meeting & Program</span>
+              <span>7:00-8:30 p.m.</span>
+            </div>
+            <div>
+              <span>McKinney Fire Station 5</span>
+              <span>Community Room</span>
+              <span>6600 Virginia Parkway</span>
+              <span>McKinney, TX</span>
+            </div>
+          </div>
           <ul className="footer-list-2"></ul>
-          <p>
-            © 2024 First Nighter <br></br> African Violet Society of Dallas
-          </p>
-          <div className="gov">
-            <a
-              href="https://africanvioletsocietyofamerica.org/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={logo} alt="national african violet society"></img>
-            </a>
-            <a href="https://lsavc.org/" target="_blank" rel="noreferrer">
-              <img src={tx} alt="texas african violet society"></img>
-            </a>
-            <span>
-              Developed by
+          <div className="credits">
+            <p>
+              © 2024 First Nighter <span>African Violet Society of Dallas</span>
+            </p>
+            <div className="gov">
               <a
-                href="https://www.jameshlo.com/"
+                href="https://africanvioletsocietyofamerica.org/"
                 target="_blank"
                 rel="noreferrer"
               >
-                James H Lo
+                <img src={logo} alt="national african violet society"></img>
               </a>
-            </span>
+              <a href="https://lsavc.org/" target="_blank" rel="noreferrer">
+                <img src={tx} alt="texas african violet society"></img>
+              </a>
+              <span>
+                Developed by
+                <a
+                  href="https://www.jameshlo.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  James H Lo
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </footer>

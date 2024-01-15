@@ -79,8 +79,15 @@ html {
 .italic {
   font-style: italic;
 }
+.App {
+  background-color: #e9e9e9;
+}
 .App > *:not(:first-child) {
   position: relative;
+  z-index: 4;
+}
+.App > div:not(:last-child, :first-child) {
+  background-color: #fff;
 }
 
 //Navbar
@@ -94,16 +101,18 @@ html {
   padding: 12px 24px;
   border-bottom: solid 1px #330066;
   background-color: #f9f7f4;
+  @include xxl() {
+    border-bottom: 0;
+  }
   nav {
     @include flexContainer(row, space-between, center);
-    max-width: 1170px;
+    max-width: 1440px;
     margin: 0 auto;
 
     .logo {
       width: 5rem;
       vertical-align: middle;
       @include lg {
-        width: 7rem;
       }
     }
   }
@@ -138,24 +147,6 @@ html {
       flex-direction: row;
       /* TEXT */
       .slider__slide figcaption,
-      h1,
-      p {
-        position: absolute;
-        bottom: 120px;
-        line-height: 120%;
-        letter-spacing: -0.025em;
-        color: white;
-        width: 100%;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 24px 24px;
-        z-index: 100;
-      }
-      p {
-        font-size: 1.1rem;
-        bottom: 60px;
-        font-weight: 400;
-      }
       .slider__slide {
         width: calc(100% / 3);
         flex: 1;
@@ -199,6 +190,9 @@ html {
       bottom: 20px;
       background-color: #00000099;
       border-radius: 2px;
+      @include xxl {
+        right: 0;
+      }
       .slider__anchor {
         height: 4px;
         width: 18px;
@@ -229,6 +223,42 @@ html {
         background-color: #fff;
       }
     }
+    .interface {
+      width: 1440px;
+      height: 49vh;
+      background-color: transparent;
+      top: 50%;
+      left: 50%;
+      @include xxl {
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+      h1,
+      p {
+        position: absolute;
+        bottom: 120px;
+        line-height: 120%;
+        letter-spacing: -0.025em;
+        color: white;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 24px 24px;
+        z-index: 100;
+        @include xxl {
+          font-size: 2.5rem;
+          padding-left: 0;
+        }
+      }
+      p {
+        font-size: 1.1rem;
+        bottom: 60px;
+        font-weight: 400;
+        @include xxl {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }
 
@@ -245,7 +275,7 @@ html {
     width: calc(var(--width, 0) * 1%);
     min-width: 0%;
     max-width: 100%;
-    background-color: #330066;
+    background-color: #5c2196;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
   }
@@ -256,124 +286,141 @@ html {
   @include flexContainer(column, center, flex-start);
   width: 100%;
   height: 400px;
-  padding: 12px 0;
+  padding: 24px 0;
   background-color: #e1d2a3;
   position: relative;
   z-index: 10;
+  @include xxl {
+    height: 425px;
+  }
   h2 {
     color: #333;
     font-size: 2rem;
     font-weight: 500;
     font-style: italic;
     padding-left: 24px;
-    margin: 12px 0;
-  }
-}
-.arrow-right {
-  width: 20px;
-  margin-left: 6px;
-  vertical-align: sub;
-}
-.calendar {
-  @include flexContainer(row, flex-start, center);
-  width: inherit;
-  height: 300px;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 24px;
-  overflow: scroll;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-  @include md() {
-    scroll-snap-type: none;
-  }
-  &::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    width: 250px;
-    margin: 0 12px;
-    transition: all 0.2s;
-    transform: scale(1);
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-    }
-    &:first-child {
-      margin-left: 24px;
-    }
-    &:last-child {
-      margin-right: 24px;
+    margin-bottom: 24px;
+    max-width: 1440px;
+    margin: 24px auto 12px;
+    @include xxl {
+      padding-left: 0;
     }
   }
-  &.active {
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
+  > div {
+    width: 100%;
+    background-color: #e1d2a3;
   }
-  .calendar-item {
-    @include flexContainer(column, space-evenly, flex-start);
+  .arrow-right {
+    width: 20px;
+    margin-left: 6px;
+  }
+  .calendar {
+    @include flexContainer(row, flex-start, center);
     width: inherit;
-    height: 250px;
-    padding: 0 12px;
-    border-radius: 6px;
-    background: transparent;
-    position: relative;
-    z-index: -10;
-    scroll-snap-align: start;
+    height: 300px;
+    max-width: 1440px;
+    margin: 0 auto;
 
-    h3,
-    span {
-      margin: 6px 0;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 24px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    @include md() {
+      scroll-snap-type: none;
     }
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 500;
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
     }
-    span {
-      font-size: 1.125rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      width: 250px;
+      margin: 0 12px;
+      transition: all 0.2s;
+      transform: scale(1);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:first-child {
+        margin-left: 24px;
+        @include xxl() {
+          margin-left: 0;
+        }
+      }
+      &:last-child {
+        margin-right: 24px;
+      }
     }
-    .f-1 {
-      background-image: url(./images/calendar1.webp);
+    &.active {
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
     }
-    .f-2 {
-      background-image: url(./images/calendar2.webp);
-    }
-    .f-3 {
-      background-image: url(./images/calendar3.webp);
-    }
-    figure {
-      background-size: cover;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      border: 2px solid #330066;
+    .calendar-item {
+      @include flexContainer(column, space-evenly, flex-start);
+      width: inherit;
+      height: 250px;
+      padding: 0 12px;
       border-radius: 6px;
-      z-index: -1000;
-      &::before {
-        content: "";
+      background: transparent;
+      position: relative;
+      z-index: -10;
+      scroll-snap-align: start;
+      box-shadow: 3px 3px 2px #333;
+
+      h3,
+      span {
+        margin: 6px 0;
+      }
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+      span {
+        font-size: 1.125rem;
+      }
+      .f-1 {
+        background-image: url(./images/calendar1.webp);
+      }
+      .f-2 {
+        background-image: url(./images/calendar2.webp);
+      }
+      .f-3 {
+        background-image: url(./images/calendar3.webp);
+      }
+      figure {
+        background-size: cover;
         position: absolute;
         bottom: 0;
         left: 0;
-        width: inherit;
-        height: inherit;
+        height: 100%;
+        width: 100%;
         border-radius: 6px;
-        background: rgb(100, 63, 152);
-        background: linear-gradient(
-          45deg,
-          rgba(100, 63, 152, 0.923) 0%,
-          rgba(116, 66, 187, 0.712) 35%,
-          rgba(116, 66, 187, 0.597) 70%,
-          rgba(255, 255, 255, 0) 100%
-        );
+        z-index: -1000;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: inherit;
+          height: inherit;
+          border-radius: 6px;
+          background: rgb(100, 63, 152);
+          background: linear-gradient(
+            45deg,
+            rgba(100, 63, 152, 0.923) 0%,
+            rgba(116, 66, 187, 0.712) 35%,
+            rgba(116, 66, 187, 0.597) 70%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
       }
-    }
-    &:hover {
-      h3 {
-        text-decoration: underline;
+      &:hover {
+        h3 {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -392,7 +439,7 @@ html {
     height: inherit;
     background-image: url("./images/values.webp");
     background-size: cover;
-    background-position: center;
+    background-position: center 45%;
     &::before {
       content: "";
       width: inherit;
@@ -419,13 +466,22 @@ html {
       @include flexContainer(column, space-between, flex-start);
       color: #fff;
       text-align: left;
+      @include sm {
+        @include flexContainer(column, space-between, center);
+      }
       span {
         font-size: 1.1rem;
+        @include xxl {
+          font-size: 1.25rem;
+        }
       }
       h3 {
         margin-bottom: 12px;
         font-size: 1.5rem;
         font-weight: 500;
+        @include xxl {
+          font-size: 1.75rem;
+        }
         span {
           font-size: inherit;
         }
@@ -456,6 +512,7 @@ html {
 }
 .logos {
   max-width: 1440px;
+  margin: 0 auto;
   background-color: #fff;
   padding: 30px 24px;
   overflow: hidden;
@@ -492,6 +549,18 @@ html {
   img {
     height: 40px;
     margin: 0 24px;
+    @include md {
+      margin: 0 36px;
+    }
+    @include lg {
+      margin: 0 48px;
+    }
+    @include xl {
+      margin: 0 60px;
+    }
+    @include xxl {
+      margin: 0 72px;
+    }
   }
 }
 
@@ -504,36 +573,63 @@ html {
     font-size: 1.5rem;
     font-weight: 500;
     font-style: italic;
+    @include md {
+      font-size: 1.75rem;
+    }
   }
-  p {
+  > div:first-child {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  div {
     font-size: 1rem;
     font-weight: 500;
-    margin-top: 24px;
+    margin-top: 12px;
     text-align: center;
+    span {
+      display: block;
+      font-size: inherit;
+      @include sm {
+        display: inline;
+      }
+    }
   }
   .schedule {
     margin: 24px 0;
     line-height: 1.25rem;
-  }
-  .footer-list-1 {
-    > li {
-      font-size: 0.875rem;
-      font-weight: 600;
-      > ul {
-        display: none;
+    span {
+      font-size: 0.94rem;
+      display: block;
+      @include sm {
+        font-size: 1rem;
       }
     }
-    button {
-      padding: 0;
-      background-color: transparent;
+    @include md {
+      display: none;
     }
-    .expand {
-      width: 0.7rem;
-      margin-right: 2px;
+  }
+  .schedule-wide {
+    margin: 24px 0;
+    line-height: 1.5rem;
+    display: none;
+    @include md {
+      @include flexContainer(row, space-evenly, center);
+    }
+    div {
+      margin-top: 0;
+    }
+    span {
+      display: block;
+      @include md {
+        font-size: 1.1rem;
+      }
     }
   }
   .footer-list-2 {
     border-top: 1px solid #333;
+    @include xxl {
+      border-top: 1px solid #33333300;
+    }
     // li:first-child {
     //   border: 0;
     // }
@@ -546,8 +642,14 @@ html {
     //   padding: 0;
     // }
   }
+  .credits {
+    @include md {
+      @include flexContainer(row, space-between, center);
+      margin-top: 24px;
+    }
+  }
   .gov {
-    @include flexContainer(row, space-evenly, flex-start);
+    @include flexContainer(row, center, center);
     margin-top: 24px;
     img {
       height: 36px;
@@ -567,6 +669,9 @@ html {
           text-decoration: underline;
         }
       }
+    }
+    @include md {
+      margin-top: 0px;
     }
   }
 }

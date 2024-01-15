@@ -113,14 +113,6 @@ const Slider = () => {
         {/* Slider Content */}
         <div className="slider" id="slider" ref={sliderRef}>
           <div className="slider__holder">
-            <h1>
-              The First Nighter <br /> African Violet Society of{" "}
-              <span className="italic">Dallas</span>
-            </h1>
-            <p>
-              Passionate and Excited About African Violets Since{" "}
-              <span className="italic">November 9, 1955</span>.
-            </p>
             <figure
               className="slider__slide"
               id="slide-0"
@@ -138,29 +130,40 @@ const Slider = () => {
             ></figure>
           </div>
           {/* Slider Navigation */}
-          <nav className="slider__nav" ref={sliderNavRef}>
-            <a
-              className="slider__anchor slider__anchor--active"
-              href="#slide-0"
-              ref={sliderNavElementsRef}
-            >
-              0
-            </a>
-            <a
-              className="slider__anchor"
-              href="#slide-1"
-              ref={sliderNavElementsRef}
-            >
-              1
-            </a>
-            <a
-              className="slider__anchor"
-              href="#slide-2"
-              ref={sliderNavElementsRef}
-            >
-              2
-            </a>
-          </nav>
+          <div className="interface">
+            <h1>
+              The First Nighter <br /> African Violet Society of{" "}
+              <span className="italic">Dallas</span>
+            </h1>
+            <p>
+              Passionate and Excited About African Violets Since{" "}
+              <span className="italic">November 9, 1955</span>.
+            </p>
+            <nav className="slider__nav" ref={sliderNavRef}>
+              <a
+                className="slider__anchor slider__anchor--active"
+                href="#slide-0"
+                ref={sliderNavElementsRef}
+              >
+                0
+              </a>
+              <a
+                className="slider__anchor"
+                href="#slide-1"
+                ref={sliderNavElementsRef}
+              >
+                1
+              </a>
+              <a
+                className="slider__anchor"
+                href="#slide-2"
+                ref={sliderNavElementsRef}
+              >
+                2
+              </a>
+            </nav>
+          </div>
+
           {/* END Slider Navigation  */}
         </div>
         {/* END Slider Content*/}

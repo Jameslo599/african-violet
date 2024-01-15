@@ -22,16 +22,18 @@ const Logo = () => {
   };
 
   return (
-    <div className="logos" ref={logoContainerRef}>
-      <div className="logos-slide" ref={logoRef}>
-        <img src={allen} alt="allen logo"></img>
-        <img src={princeton} alt="princeton logo"></img>
-        <img src={plano} alt="plano logo"></img>
-        <img src={mckinney} alt="mckinney logo"></img>
-        <img src={fairview} alt="fairview logo"></img>
-        <img src={frisco} alt="frisco logo"></img>
-        <img src={prosper} alt="prosper logo"></img>
-        <img src={melissa} alt="melissa logo"></img>
+    <div>
+      <div className="logos" ref={logoContainerRef}>
+        <div className="logos-slide" ref={logoRef}>
+          <img src={allen} alt="allen logo"></img>
+          <img src={princeton} alt="princeton logo"></img>
+          <img src={plano} alt="plano logo"></img>
+          <img src={mckinney} alt="mckinney logo"></img>
+          <img src={fairview} alt="fairview logo"></img>
+          <img src={frisco} alt="frisco logo"></img>
+          <img src={prosper} alt="prosper logo"></img>
+          <img src={melissa} alt="melissa logo"></img>
+        </div>
       </div>
     </div>
   );

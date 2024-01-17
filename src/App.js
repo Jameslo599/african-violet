@@ -4,6 +4,7 @@ import tx from "./images/lone-star.jpg";
 import MenuToClose from "./images/icons/menu-to-close";
 import Slider from "./slider";
 import Calendar from "./calendar";
+import Events from "./events";
 import Values from "./values";
 import Logo from "./logo-strip";
 
@@ -13,6 +14,7 @@ function App() {
       <MyHeader />
       <Slider />
       <Calendar />
+      <Events />
       <Values />
       <Logo />
       <div className="dummy"></div>

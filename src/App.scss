@@ -85,6 +85,7 @@ html {
 .App > *:not(:first-child) {
   position: relative;
   z-index: 4;
+  transition: all 0.25s ease-in-out;
 }
 .App > div:not(:last-child, :first-child) {
   background-color: #fff;
@@ -286,8 +287,8 @@ html {
   @include flexContainer(column, center, flex-start);
   width: 100%;
   height: 400px;
-  padding: 24px 0;
-  background-color: #e1d2a3;
+  padding: 24px 0 36px;
+  background-color: #f7e8bd;
   position: relative;
   z-index: 10;
   @include xxl {
@@ -308,11 +309,12 @@ html {
   }
   > div {
     width: 100%;
-    background-color: #e1d2a3;
+    background-color: #f7e8bd;
   }
   .arrow-right {
-    width: 20px;
+    width: 24px;
     margin-left: 6px;
+    vertical-align: bottom;
   }
   .calendar {
     @include flexContainer(row, flex-start, center);
@@ -320,9 +322,9 @@ html {
     height: 300px;
     max-width: 1440px;
     margin: 0 auto;
-
     scroll-snap-type: x mandatory;
-    scroll-padding-left: 24px;
+    scroll-padding-left: 30px;
+    scroll-padding-right: 24px;
     overflow: scroll;
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
@@ -342,7 +344,7 @@ html {
       transform: scale(1);
       cursor: pointer;
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.01);
       }
       &:first-child {
         margin-left: 24px;
@@ -376,10 +378,11 @@ html {
       }
       h3 {
         font-size: 1.25rem;
-        font-weight: 500;
+        font-weight: 600;
       }
       span {
         font-size: 1.125rem;
+        font-weight: 500;
       }
       .f-1 {
         background-image: url(./images/calendar1.webp);
@@ -410,9 +413,9 @@ html {
           background: rgb(100, 63, 152);
           background: linear-gradient(
             45deg,
-            rgba(100, 63, 152, 0.923) 0%,
-            rgba(116, 66, 187, 0.712) 35%,
-            rgba(116, 66, 187, 0.597) 70%,
+            #1b4d3e,
+            #123328a5,
+            #2f876d2b,
             rgba(255, 255, 255, 0) 100%
           );
         }
@@ -420,6 +423,33 @@ html {
       &:hover {
         h3 {
           text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//Hosted Programs
+.events-container {
+  background-color: #f8ebda;
+  > div {
+    background-color: inherit;
+  }
+  .events {
+    background-color: inherit;
+  }
+  .calendar {
+    .calendar-item {
+      figure {
+        &::before {
+          background: rgb(100, 63, 152);
+          background: linear-gradient(
+            45deg,
+            #0a2351,
+            #0d2e6a6f 35%,
+            #15459d2c 70%,
+            rgba(255, 255, 255, 0) 100%
+          );
         }
       }
     }

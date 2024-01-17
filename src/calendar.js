@@ -4,18 +4,9 @@ import ArrowRight from "./images/icons/arrow-right";
 //Horizontal photo calendar
 const Calendar = () => {
   const calendarRef = useRef(null);
-  const itemsRef = useRef([]);
-  //itemsRef.current = document.querySelectorAll(".calendar-item").length;
-  //   class Event {
-  //     constructor(title, address, date, time) {
-  //       this.title = title;
-  //       this.address = address;
-  //       this.date = date;
-  //       this.time = time;
-  //     }
-  //   }
-  //itemsEls.current.splice (index, 1, element)
+
   let isDown = false;
+  let isMove = false;
   let startX;
   let scrollLeft;
 
@@ -28,12 +19,18 @@ const Calendar = () => {
     calendarRef.current.addEventListener("mouseleave", mouseLeave);
     calendarRef.current.addEventListener("mouseup", mouseUp);
     calendarRef.current.addEventListener("mousemove", mouseMove);
+    const items = document.querySelectorAll(".event");
+    items.forEach((e) => e.addEventListener("click", jumpTo));
   };
   const mouseDown = (e) => {
+    isMove = false;
     isDown = true;
     calendarRef.current.classList.add("active");
     startX = e.pageX - calendarRef.current.offsetLeft;
     scrollLeft = calendarRef.current.scrollLeft;
+    setTimeout(() => {
+      isMove = true;
+    }, 100);
   };
   const mouseLeave = () => {
     isDown = false;
@@ -50,19 +47,24 @@ const Calendar = () => {
     const walk = x - startX;
     calendarRef.current.scrollLeft = scrollLeft - walk;
   };
+  const jumpTo = (e) => {
+    if (isMove) return;
+    isMove = false;
+    calendarRef.current.scrollLeft = e.target.closest("a").offsetLeft - 40;
+  };
 
   return (
     <div>
       <div className="calendar-container">
         <div>
           <h2>
-            Upcoming Events <ArrowRight />
+            Community Events <ArrowRight />
           </h2>
         </div>
         <div>
           <div className="calendar" ref={calendarRef}>
-            <a>
-              <div className="calendar-item" ref={itemsRef.current[0]}>
+            <a className="event">
+              <div className="calendar-item">
                 <h3>First African Violet Society of Denton Show & Sale</h3>
                 <span>
                   First Presbyterian Church, 1114 West University Denton, TX
@@ -72,8 +74,8 @@ const Calendar = () => {
                 <figure className="f-1"></figure>
               </div>
             </a>
-            <a>
-              <div className="calendar-item" ref={itemsRef.current[0]}>
+            <a className="event">
+              <div className="calendar-item">
                 <h3>Dallas Metro AV Societies Spring Sale</h3>
                 <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
                 <span>March 22-23, 2024</span>
@@ -81,8 +83,8 @@ const Calendar = () => {
                 <figure className="f-2"></figure>
               </div>
             </a>
-            <a>
-              <div className="calendar-item" ref={itemsRef.current[0]}>
+            <a className="event">
+              <div className="calendar-item">
                 <h3>
                   Moonlight African Violet and Gesneriad Society Plant Sale
                 </h3>
@@ -95,8 +97,8 @@ const Calendar = () => {
                 <figure className="f-3"></figure>
               </div>
             </a>
-            <a>
-              <div className="calendar-item" ref={itemsRef.current[0]}>
+            <a className="event">
+              <div className="calendar-item">
                 <h3>AVSA National Convention</h3>
                 <span>
                   DoubleTree Phoenix Tempe 2100 S. Priest Dr., Tempe, AZ 85282
@@ -106,8 +108,8 @@ const Calendar = () => {
                 <figure className="f-1"></figure>
               </div>
             </a>
-            <a>
-              <div className="calendar-item" ref={itemsRef.current[0]}>
+            <a className="event">
+              <div className="calendar-item">
                 <h3>
                   Moonlight African Violet and Gesneriad Society Violet Display
                   & Sale
@@ -121,8 +123,8 @@ const Calendar = () => {
                 <figure className="f-2"></figure>
               </div>
             </a>
-            <a>
-              <div className="calendar-item" ref={itemsRef.current[0]}>
+            <a className="event">
+              <div className="calendar-item">
                 <h3>Summer Workshop</h3>
                 <span>
                   First Presbyterian Church 1114 West University, Denton, TX

@@ -54,7 +54,7 @@ const Events = () => {
   };
 
   return (
-    <div>
+    <div id="programs" className="nav">
       <div className="calendar-container events-container">
         <div className="events">
           <h2>

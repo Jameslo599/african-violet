@@ -54,7 +54,7 @@ const Calendar = () => {
   };
 
   return (
-    <div>
+    <div id="community" className="nav">
       <div className="calendar-container">
         <div>
           <h2>

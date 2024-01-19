@@ -8,18 +8,20 @@ import Events from "./events";
 import Values from "./values";
 import Goals from "./goals";
 import Logo from "./logo-strip";
+import Sidebar from "./sidebar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App nav" id="home">
+      <MenuToClose />
       <MyHeader />
+      <Sidebar />
       <Slider />
       <Calendar />
       <Events />
       <Values />
       <Goals />
       <Logo />
-      <div className="dummy"></div>
       <MyFooter />
     </div>
   );
@@ -35,9 +37,26 @@ function MyHeader() {
               <img className="logo" alt="first nighter logo" src={logo}></img>
             </a>
           </div>
-          <div className="header-support">
-            <MenuToClose />
-          </div>
+          <ul>
+            <a href="#home">
+              <li>Home</li>
+            </a>
+            <a href="#community">
+              <li>Community</li>
+            </a>
+            <a href="#programs">
+              <li>Programs</li>
+            </a>
+            <a href="#values">
+              <li>Values</li>
+            </a>
+            <a href="#goals">
+              <li>Goals</li>
+            </a>
+            <a href="#meetings">
+              <li>Meetings</li>
+            </a>
+          </ul>
         </nav>
       </header>
     </div>
@@ -46,7 +65,7 @@ function MyHeader() {
 
 function MyFooter() {
   return (
-    <div className="footer-container">
+    <div className="footer-container nav" id="meetings">
       <footer className="footer">
         <div>
           <h3>Meeting Information</h3>

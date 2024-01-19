@@ -16,30 +16,32 @@ function MenuToClose(props) {
   }
 
   return (
-    <svg
-      className="hamburger"
-      onClick={handleClick}
-      height={height}
-      width={width}
-      viewBox="0 0 32 32"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g
-        fill={secondaryfill}
-        stroke={secondaryfill}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={strokewidth}
+    <div className="hamburger-container">
+      <svg
+        className="hamburger"
+        onClick={handleClick}
+        height={height}
+        width={width}
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <g className="js-nc-int-icon nc-int-menu-to-close">
-          <line fill="none" stroke={fill} x1="2" x2="30" y1="9" y2="9" />
-          <line fill="none" x1="30" x2="2" y1="23" y2="23" />
-          <line fill="none" stroke={fill} x1="30" x2="2" y1="16" y2="16" />
-          <line fill="none" x1="30" x2="2" y1="16" y2="16" />
+        <g
+          fill={secondaryfill}
+          stroke={secondaryfill}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={strokewidth}
+        >
+          <g className="js-nc-int-icon nc-int-menu-to-close">
+            <line fill="none" stroke={fill} x1="2" x2="30" y1="9" y2="9" />
+            <line fill="none" x1="30" x2="2" y1="23" y2="23" />
+            <line fill="none" stroke={fill} x1="30" x2="2" y1="16" y2="16" />
+            <line fill="none" x1="30" x2="2" y1="16" y2="16" />
+          </g>
+          <style>{css}</style>
         </g>
-        <style>{css}</style>
-      </g>
-    </svg>
+      </svg>
+    </div>
   );
 }
 

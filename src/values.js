@@ -21,7 +21,7 @@ function Values() {
   }, []);
 
   return (
-    <div className="values-container">
+    <div className="values-container nav" id="values">
       <div ref={textRef}>
         <div className="hidden">
           <h3>

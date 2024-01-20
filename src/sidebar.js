@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import flower from "./images/side-flower.webp";
 
 //Mobile navbar
 const Sidebar = () => {
@@ -50,6 +51,9 @@ const Sidebar = () => {
           </a>
         </ul>
       </nav>
+      <div>
+        <img src={flower} alt="african violet"></img>
+      </div>
     </div>
   );
 };

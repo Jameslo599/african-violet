@@ -194,10 +194,11 @@ html {
     padding: 12px;
     background-color: #f7e8bd;
     border: 1px solid black;
-    border-left: 0;
     border-radius: 2px;
+    width: fit-content;
+    margin: 0 auto;
     img {
-      max-width: 226px;
+      max-width: 200px;
       border-radius: 2px;
     }
   }

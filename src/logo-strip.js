@@ -22,7 +22,7 @@ const Logo = () => {
   };
 
   return (
-    <div>
+    <div className="logo-container">
       <div className="logos" ref={logoContainerRef}>
         <div className="logos-slide" ref={logoRef}>
           <img src={allen} alt="allen logo"></img>

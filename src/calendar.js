@@ -12,6 +12,8 @@ const Calendar = () => {
 
   useEffect(() => {
     bindEventHandler();
+    const container = document.querySelectorAll(".calendar-obs");
+    container.forEach((e) => observer.observe(e));
   }, []);
 
   const bindEventHandler = () => {
@@ -53,8 +55,21 @@ const Calendar = () => {
     calendarRef.current.scrollLeft = e.target.closest("a").offsetLeft - 40;
   };
 
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio === 1) {
+          document.querySelector(".slider-parent").classList.add("stuck");
+        } else {
+          document.querySelector(".slider-parent").classList.remove("stuck");
+        }
+      });
+    },
+    { threshold: 1 }
+  );
+
   return (
-    <div id="community" className="nav">
+    <div id="community" className="nav calendar-obs">
       <div className="calendar-container">
         <div>
           <h2>

@@ -178,7 +178,8 @@ html {
   background-color: #fafafa;
   transform: translateX(100%);
   border-left: 1px solid #333;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   nav {
@@ -782,7 +783,7 @@ html {
 
 //Footer
 .footer {
-  padding: 60px 24px;
+  padding: 60px 24px 30px;
   background-color: #f9f7f4;
   h3 {
     text-align: center;

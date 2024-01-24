@@ -355,9 +355,12 @@ html {
         }
       }
       p {
-        font-size: 1.1rem;
+        font-size: 1.125rem;
         bottom: 60px;
         font-weight: 400;
+        @include lg {
+          font-size: 1.25rem;
+        }
         @include xxl {
           font-size: 1.5rem;
         }
@@ -609,15 +612,18 @@ html {
       }
       span {
         font-size: 1.1rem;
-        @include xxl {
+        @include lg {
           font-size: 1.25rem;
+        }
+        @include xxl {
+          font-size: 1.5rem;
         }
       }
       h3 {
         margin-bottom: 12px;
         font-size: 1.5rem;
         font-weight: 500;
-        @include xxl {
+        @include lg {
           font-size: 1.75rem;
         }
         span {
@@ -815,7 +821,7 @@ html {
     margin: 24px 0;
     line-height: 1.25rem;
     span {
-      font-size: 0.94rem;
+      font-size: 1rem;
       display: block;
       @include sm {
         font-size: 1rem;
@@ -864,9 +870,17 @@ html {
       @include flexContainer(row, space-between, center);
       margin-top: 24px;
     }
+    p {
+      @include lg {
+        font-size: 1.125rem;
+      }
+      @include xxl {
+        font-size: 1.25rem;
+      }
+    }
   }
   .gov {
-    @include flexContainer(row, center, center);
+    @include flexContainer(row, center, flex-start);
     margin-top: 24px;
     img {
       height: 36px;

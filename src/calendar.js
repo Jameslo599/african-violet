@@ -12,8 +12,6 @@ const Calendar = () => {
 
   useEffect(() => {
     bindEventHandler();
-    const container = document.querySelectorAll(".calendar-obs");
-    container.forEach((e) => observer.observe(e));
   }, []);
 
   const bindEventHandler = () => {
@@ -55,21 +53,8 @@ const Calendar = () => {
     calendarRef.current.scrollLeft = e.target.closest("a").offsetLeft - 40;
   };
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio === 1) {
-          document.querySelector(".slider-parent").classList.add("stuck");
-        } else {
-          document.querySelector(".slider-parent").classList.remove("stuck");
-        }
-      });
-    },
-    { threshold: 1 }
-  );
-
   return (
-    <div id="community" className="nav calendar-obs">
+    <div id="community" className="nav">
       <div className="calendar-container">
         <div>
           <h2>
@@ -91,7 +76,7 @@ const Calendar = () => {
             </a>
             <a className="event">
               <div className="calendar-item">
-                <h3>Dallas Metro AV Societies Spring Sale</h3>
+                <h3>Dallas Metro AV Society Spring Sale</h3>
                 <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
                 <span>March 22-23, 2024</span>
                 <span>9 am – 4 pm</span>
@@ -108,7 +93,7 @@ const Calendar = () => {
                   Worth
                 </span>
                 <span>April 5, 2024, 2 pm - 6 pm</span>
-                <span>April 6, 2024, 2 am – 2 pm</span>
+                <span>April 6, 2024, 9 am – 2 pm</span>
                 <figure className="f-3"></figure>
               </div>
             </a>
@@ -146,6 +131,18 @@ const Calendar = () => {
                 </span>
                 <span>June 22, 2024</span>
                 <span className="italic">Bring a potluck dish to share.</span>
+                <figure className="f-3"></figure>
+              </div>
+            </a>
+            <a className="event">
+              <div className="calendar-item">
+                <h3>Lone Star African Violet Society Convention</h3>
+                <span className="italic">Show and Sale</span>
+                <span>
+                  DoubleTree by Hilton Hotel 1981 N. Central Expy., Richardson,
+                  TX
+                </span>
+                <span>October 31 - November 2, 2024</span>
                 <figure className="f-3"></figure>
               </div>
             </a>

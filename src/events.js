@@ -83,9 +83,18 @@ const Events = () => {
             </a>
             <a className="travel">
               <div className="calendar-item">
+                <h3>Those Proper Primulinas</h3>
+                <span>Presented by Ron Davidson</span>
+                <span>April 15, 2024</span>
+                <span>Host/Hostesses: Mike and Thelma Woodruff</span>
+                <figure className="f-3 events-bg"></figure>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
                 <h3>Marvelous Minis</h3>
                 <span>Presented by Ann Athey</span>
-                <span>April 15, 2024</span>
+                <span>May 20, 2024</span>
                 <span>Host/Hostesses: Mike and Thelma Woodruff</span>
                 <figure className="f-3 events-bg"></figure>
               </div>

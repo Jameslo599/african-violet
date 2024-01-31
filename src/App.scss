@@ -75,6 +75,7 @@ $border: 1px solid #c9ced2;
 
 html {
   font-family: "EB Garamond", serif;
+  background-color: #f9f7f4;
 }
 .italic {
   font-style: italic;
@@ -93,6 +94,7 @@ html {
 .hamburger-container {
   z-index: 9999;
 }
+.meeting-container,
 .community,
 .programs,
 .values-container,
@@ -120,6 +122,7 @@ html {
     @include flexContainer(row, space-between, center);
     max-width: 1440px;
     margin: 0 auto;
+    height: 48px;
     .logo {
       width: 5rem;
       vertical-align: middle;
@@ -385,6 +388,72 @@ html {
     background-color: #5c2196;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+  }
+}
+
+//Meeting info
+.meeting-container {
+  height: 50vh;
+  min-height: 440px;
+  width: 100%;
+  background-color: #f9f7f4;
+  .meeting {
+    @include flexContainer(column, center, center);
+    height: inherit;
+    padding: 0 24px;
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+      font-style: italic;
+    }
+    > div:first-child {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    div {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 24px;
+      text-align: center;
+      span {
+        display: block;
+        font-size: inherit;
+        @include sm {
+          display: inline;
+        }
+      }
+    }
+    .schedule {
+      line-height: 1.25rem;
+      span {
+        font-size: 1.125rem;
+        display: block;
+        @include sm {
+          font-size: 1rem;
+        }
+      }
+      @include md {
+        display: none;
+      }
+    }
+    .schedule-wide {
+      margin: 24px 0;
+      line-height: 1.5rem;
+      display: none;
+      @include md {
+        @include flexContainer(row, space-evenly, center);
+      }
+      div {
+        margin-top: 0;
+      }
+      span {
+        display: block;
+        @include md {
+          font-size: 1.1rem;
+        }
+      }
+    }
   }
 }
 
@@ -789,70 +858,13 @@ html {
 
 //Footer
 .footer {
-  padding: 60px 24px 30px;
+  padding: 24px;
   background-color: #f9f7f4;
-  h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-style: italic;
-    @include md {
-      font-size: 1.75rem;
-    }
-  }
-  > div:first-child {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  div {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 12px;
-    text-align: center;
-    span {
-      display: block;
-      font-size: inherit;
-      @include sm {
-        display: inline;
-      }
-    }
-  }
-  .schedule {
-    margin: 24px 0;
-    line-height: 1.25rem;
-    span {
-      font-size: 1rem;
-      display: block;
-      @include sm {
-        font-size: 1rem;
-      }
-    }
-    @include md {
-      display: none;
-    }
-  }
-  .schedule-wide {
-    margin: 24px 0;
-    line-height: 1.5rem;
-    display: none;
-    @include md {
-      @include flexContainer(row, space-evenly, center);
-    }
-    div {
-      margin-top: 0;
-    }
-    span {
-      display: block;
-      @include md {
-        font-size: 1.1rem;
-      }
-    }
-  }
   .footer-list-2 {
-    border-top: 1px solid #333;
-    @include xxl {
-      border-top: 1px solid #33333300;
-    }
+    // border-top: 1px solid #333;
+    // @include xxl {
+    //   border-top: 1px solid #33333300;
+    // }
     // li:first-child {
     //   border: 0;
     // }
@@ -865,12 +877,24 @@ html {
     //   padding: 0;
     // }
   }
+  div {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    span {
+      display: block;
+      font-size: inherit;
+      @include sm {
+        display: inline;
+      }
+    }
+  }
   .credits {
     @include md {
       @include flexContainer(row, space-between, center);
-      margin-top: 24px;
     }
-    p {
+    p,
+    a {
       @include lg {
         font-size: 1.125rem;
       }
@@ -880,29 +904,32 @@ html {
     }
   }
   .gov {
-    @include flexContainer(row, center, flex-start);
-    margin-top: 24px;
+    @include flexContainer(row, space-evenly, center);
+    margin-bottom: 24px;
     img {
       height: 36px;
       padding-right: 24px;
+    }
+    a {
+      display: block;
+      font-weight: 600;
+      color: #330066;
+      text-decoration: none;
+      &:hover {
+        color: #330066c8;
+        text-decoration: underline;
+      }
+      @include md {
+        padding: 0 12px;
+      }
     }
     span {
       font-size: 1rem;
       font-weight: 500;
       text-align: center;
-      a {
-        display: block;
-        font-weight: 600;
-        color: #330066;
-        text-decoration: none;
-        &:hover {
-          color: #330066c8;
-          text-decoration: underline;
-        }
-      }
     }
     @include md {
-      margin-top: 0px;
+      margin-bottom: 0px;
     }
   }
 }

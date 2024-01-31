@@ -9,6 +9,7 @@ import Values from "./values";
 import Goals from "./goals";
 import Logo from "./logo-strip";
 import Sidebar from "./sidebar";
+import Meeting from "./meeting";
 
 function App() {
   return (
@@ -17,11 +18,12 @@ function App() {
       <MyHeader />
       <Sidebar />
       <Slider />
-      <Calendar />
+      <Meeting />
       <Events />
+      <Calendar />
       <Values />
       <Goals />
-      <Logo />
+      {/* <Logo /> */}
       <MyFooter />
     </div>
   );
@@ -34,7 +36,7 @@ function MyHeader() {
         <nav>
           <div>
             <a href="#">
-              <img className="logo" alt="first nighter logo" src={logo}></img>
+              <img className="logo" alt="first nighter logo"></img>
             </a>
           </div>
           <ul>
@@ -68,55 +70,20 @@ function MyFooter() {
     <div className="footer-container nav" id="meetings">
       <footer className="footer">
         <div>
-          <h3>Meeting Information</h3>
-          <div className="schedule">
-            <div>
-              <span>Every Third Monday</span>
-              <span>January - May & September - November</span>
-            </div>
-            <div>
-              <span>6:30-7:00 p.m. Social Time</span>
-              <span>7:00-8:30 p.m. Business Meeting & Program</span>
-            </div>
-            <div>
-              <span>McKinney Fire Station 5, Community Room</span>
-              <span>6600 Virginia Parkway, McKinney, TX</span>
-            </div>
-          </div>
-          <div className="schedule-wide">
-            <div>
-              <span>Every Third Monday</span>
-              <span>January - May</span>
-              <span>September - November</span>
-            </div>
-            <div>
-              <span>Social Time</span>
-              <span>6:30-7:00 p.m.</span>
-              <span>Business Meeting & Program</span>
-              <span>7:00-8:30 p.m.</span>
-            </div>
-            <div>
-              <span>McKinney Fire Station 5</span>
-              <span>Community Room</span>
-              <span>6600 Virginia Parkway</span>
-              <span>McKinney, TX</span>
-            </div>
-          </div>
-          <ul className="footer-list-2"></ul>
+          {/* <ul className="footer-list-2"></ul> */}
           <div className="credits">
-            <p>
-              © 2024 First Nighter <span>African Violet Society of Dallas</span>
-            </p>
             <div className="gov">
               <a
                 href="https://africanvioletsocietyofamerica.org/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={logo} alt="national african violet society"></img>
+                AVSA
+                {/* <img src={logo} alt="national african violet society"></img> */}
               </a>
               <a href="https://lsavc.org/" target="_blank" rel="noreferrer">
-                <img src={tx} alt="texas african violet society"></img>
+                LSAVC
+                {/* <img src={tx} alt="texas african violet society"></img> */}
               </a>
               <span>
                 Developed by
@@ -129,6 +96,9 @@ function MyFooter() {
                 </a>
               </span>
             </div>
+            <p>
+              © 2024 First Nighter <span>African Violet Society of Dallas</span>
+            </p>
           </div>
         </div>
       </footer>

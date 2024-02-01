@@ -34,11 +34,14 @@ const Sidebar = () => {
           <a href="#home">
             <li>Home</li>
           </a>
-          <a href="#community">
-            <li>Community</li>
+          <a href="#meeting">
+            <li>Meetings</li>
           </a>
           <a href="#programs">
             <li>Programs</li>
+          </a>
+          <a href="#community">
+            <li>Community</li>
           </a>
           <a href="#values">
             <li>Values</li>

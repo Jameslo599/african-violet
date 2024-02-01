@@ -39,6 +39,12 @@ function Meeting() {
     <div className="meeting-container nav calendar-obs" id="meeting">
       <div className="meeting" ref={textRef}>
         <h3 className="hidden">Meeting Information</h3>
+        <span className="contact hidden">
+          Email:{" "}
+          <a href="mailto:first.nighter.avs@gmail.com">
+            first.nighter.avs@gmail.com
+          </a>
+        </span>
         <div className="schedule">
           <div className="hidden">
             <span>Every Third Monday</span>

@@ -396,7 +396,7 @@ html {
   height: 60vh;
   min-height: 440px;
   width: 100%;
-  background-color: #f9f7f4;
+  background-color: #fff;
   @include md {
     min-height: 220px;
     height: 40vh;
@@ -419,7 +419,6 @@ html {
     > span {
       font-weight: 600;
       display: block;
-      margin-top: 24px;
       text-align: center;
       @include md {
         font-size: 1.25rem;

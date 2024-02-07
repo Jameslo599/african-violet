@@ -25,14 +25,14 @@ function Meeting() {
   const sticky = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio === 1) {
+        if (entry.intersectionRatio >= 0.9) {
           document.querySelector(".slider-parent").classList.add("stuck");
         } else {
           document.querySelector(".slider-parent").classList.remove("stuck");
         }
       });
     },
-    { threshold: 1 }
+    { threshold: 0.9 }
   );
 
   return (

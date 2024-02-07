@@ -231,12 +231,14 @@ html {
 //Slider
 .App > .slider-parent {
   position: relative;
+  top: 0px;
 }
 .App > .stuck {
   position: sticky;
   top: -1px;
   z-index: 1;
   transition: top 1s linear;
+  -webkit-transition: top 1s linear;
 }
 .wrapper__slider {
   width: 100%;

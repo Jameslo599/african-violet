@@ -18,22 +18,10 @@ function Meeting() {
       const children = textRef.current.querySelectorAll(".hidden");
       children.forEach((e) => observer.observe(e));
     }
-    const container = document.querySelectorAll(".calendar-obs");
-    container.forEach((e) => sticky.observe(e));
   }, []);
 
-  const sticky = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        document.querySelector(".slider-parent").classList.add("stuck");
-      } else {
-        document.querySelector(".slider-parent").classList.remove("stuck");
-      }
-    });
-  });
-
   return (
-    <div className="meeting-container nav calendar-obs" id="meeting">
+    <div className="meeting-container nav" id="meeting">
       <div className="meeting" ref={textRef}>
         <h3 className="hidden">Meeting Information</h3>
         <span className="contact hidden">

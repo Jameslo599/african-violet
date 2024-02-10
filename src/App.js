@@ -18,8 +18,8 @@ function App() {
       <MyHeader />
       <Sidebar />
       <Slider />
-      <Meeting />
       <Events />
+      <Meeting />
       <Calendar />
       <Values />
       <Goals />

@@ -12,7 +12,19 @@ const Events = () => {
 
   useEffect(() => {
     bindEventHandler();
+    const container = document.querySelectorAll(".calendar-obs");
+    container.forEach((e) => sticky.observe(e));
   }, []);
+
+  const sticky = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        document.querySelector(".slider-parent").classList.add("stuck");
+      } else {
+        document.querySelector(".slider-parent").classList.remove("stuck");
+      }
+    });
+  });
 
   const bindEventHandler = () => {
     eventsRef.current.addEventListener("mousedown", mouseDown);
@@ -54,7 +66,7 @@ const Events = () => {
   };
 
   return (
-    <div id="programs" className="nav">
+    <div id="programs" className="nav calendar-obs">
       <div className="calendar-container events-container">
         <div className="events">
           <h2>

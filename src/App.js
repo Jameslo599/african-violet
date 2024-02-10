@@ -35,8 +35,9 @@ function MyHeader() {
       <header className="header">
         <nav>
           <div>
-            <a href="#">
-              <img className="logo" alt="first nighter logo"></img>
+            <a href="#" className="text-logo">
+              <h2>FNAVSD</h2>
+              {/* <img className="logo" alt="first nighter logo"></img> */}
             </a>
           </div>
           <ul>

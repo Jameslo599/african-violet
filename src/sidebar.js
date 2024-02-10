@@ -49,9 +49,6 @@ const Sidebar = () => {
           <a href="#goals">
             <li>Goals</li>
           </a>
-          <a href="#meetings">
-            <li>Meetings</li>
-          </a>
         </ul>
       </nav>
       <div>

@@ -65,26 +65,33 @@ const Calendar = () => {
           <div className="calendar" ref={calendarRef}>
             <a className="event">
               <div className="calendar-item">
+                <figure className="f-1"></figure>
+              </div>
+              <div className="description">
                 <h3>First African Violet Society of Denton Show & Sale</h3>
                 <span>
                   First Presbyterian Church, 1114 West University Denton, TX
                 </span>
                 <span>March 14 - 16, 2024</span>
                 <span className="italic">“Violets Take Over the World”</span>
-                <figure className="f-1"></figure>
               </div>
             </a>
             <a className="event">
               <div className="calendar-item">
+                <figure className="f-2"></figure>
+              </div>
+              <div className="description">
                 <h3>Dallas Metro AV Society Spring Sale</h3>
                 <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
                 <span>March 22-23, 2024</span>
                 <span>9 am – 4 pm</span>
-                <figure className="f-2"></figure>
               </div>
             </a>
             <a className="event">
               <div className="calendar-item">
+                <figure className="f-3"></figure>
+              </div>
+              <div className="description">
                 <h3>
                   Moonlight African Violet and Gesneriad Society Plant Sale
                 </h3>
@@ -94,22 +101,26 @@ const Calendar = () => {
                 </span>
                 <span>April 5, 2024, 2 pm - 6 pm</span>
                 <span>April 6, 2024, 9 am – 2 pm</span>
-                <figure className="f-3"></figure>
               </div>
             </a>
             <a className="event">
               <div className="calendar-item">
+                <figure className="f-1"></figure>
+              </div>
+              <div className="description">
                 <h3>AVSA National Convention</h3>
                 <span>
                   DoubleTree Phoenix Tempe 2100 S. Priest Dr., Tempe, AZ 85282
                 </span>
                 <span>April 21 - 28, 2024</span>
                 <span className="italic">“Spirit of the Southwest”</span>
-                <figure className="f-1"></figure>
               </div>
             </a>
             <a className="event">
               <div className="calendar-item">
+                <figure className="f-2"></figure>
+              </div>
+              <div className="description">
                 <h3>
                   Moonlight African Violet and Gesneriad Society Violet Display
                   & Sale
@@ -120,22 +131,26 @@ const Calendar = () => {
                 </span>
                 <span>May 4, 2024</span>
                 <span>9 am – 4 pm</span>
-                <figure className="f-2"></figure>
               </div>
             </a>
             <a className="event">
               <div className="calendar-item">
+                <figure className="f-3"></figure>
+              </div>
+              <div className="description">
                 <h3>Summer Workshop</h3>
                 <span>
                   First Presbyterian Church 1114 West University, Denton, TX
                 </span>
                 <span>June 22, 2024</span>
                 <span className="italic">Bring a potluck dish to share.</span>
-                <figure className="f-3"></figure>
               </div>
             </a>
             <a className="event">
               <div className="calendar-item">
+                <figure className="f-3"></figure>
+              </div>
+              <div className="description">
                 <h3>Lone Star African Violet Society Convention</h3>
                 <span className="italic">Show and Sale</span>
                 <span>
@@ -143,7 +158,6 @@ const Calendar = () => {
                   TX
                 </span>
                 <span>October 31 - November 2, 2024</span>
-                <figure className="f-3"></figure>
               </div>
             </a>
           </div>

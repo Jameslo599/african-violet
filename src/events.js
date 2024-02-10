@@ -65,47 +65,57 @@ const Events = () => {
           <div className="calendar events event-calendar" ref={eventsRef}>
             <a className="travel">
               <div className="calendar-item">
+                <figure className="f-1 events-bg"></figure>
+              </div>
+              <div className="description">
                 <h3>Growing Exceptional Episcias</h3>
                 <span>Presented by Dale Martens via Zoom</span>
                 <span>February 5, 2024</span>
                 <span>Hostesses: Wendy Russell and Stuart Small</span>
-                <figure className="f-1 events-bg"></figure>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
+                <figure className="f-2 events-bg"></figure>
+              </div>
+              <div className="description">
                 <h3>Superior Soil</h3>
                 <span>Share your soil recipe and soil with members.</span>
                 <span>March 18, 2024</span>
                 <span>Hostesses: Cindy Branch and David Finley</span>
-                <figure className="f-2 events-bg"></figure>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
+                <figure className="f-3 events-bg"></figure>
+              </div>
+              <div className="description">
                 <h3>Those Proper Primulinas</h3>
                 <span>Presented by Ron Davidson</span>
                 <span>April 15, 2024</span>
                 <span>Host/Hostesses: Mike and Thelma Woodruff</span>
-                <figure className="f-3 events-bg"></figure>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
+                <figure className="f-3 events-bg"></figure>
+              </div>
+              <div className="description">
                 <h3>Marvelous Minis</h3>
                 <span>Presented by Ann Athey</span>
                 <span>May 20, 2024</span>
                 <span>Host/Hostesses: Mike and Thelma Woodruff</span>
-                <figure className="f-3 events-bg"></figure>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
+                <figure className="f-1 events-bg"></figure>
+              </div>
+              <div className="description">
                 <h3>Vacationing Care for Violets</h3>
                 <span>Open discussion by membership</span>
                 <span>May 20, 2024</span>
                 <span>Hostesses: Eileen Hara and Sandy Fass</span>
-                <figure className="f-1 events-bg"></figure>
               </div>
             </a>
           </div>

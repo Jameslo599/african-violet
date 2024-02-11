@@ -116,18 +116,7 @@ const Events = () => {
                 <h3>Marvelous Minis</h3>
                 <span>Presented by Ann Athey</span>
                 <span>May 20, 2024</span>
-                <span>Host/Hostesses: Mike and Thelma Woodruff</span>
-              </div>
-            </a>
-            <a className="travel">
-              <div className="calendar-item">
-                <figure className="f-2 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>Vacationing Care for Violets</h3>
-                <span>Open discussion by membership</span>
-                <span>May 20, 2024</span>
-                <span>Hostesses: Eileen Hara and Sandy Fass</span>
+                <span>Host/Hostesses: Cathy Scheel and Stuart Small</span>
               </div>
             </a>
           </div>

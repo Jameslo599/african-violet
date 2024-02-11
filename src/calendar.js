@@ -148,7 +148,7 @@ const Calendar = () => {
             </a>
             <a className="event">
               <div className="calendar-item">
-                <figure className="f-3"></figure>
+                <figure className="f-1"></figure>
               </div>
               <div className="description">
                 <h3>Lone Star African Violet Society Convention</h3>

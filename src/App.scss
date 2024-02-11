@@ -565,8 +565,9 @@ html {
       margin: 0 12px;
       transition: all 0.2s;
       transform: scale(1);
+      border-radius: 6px;
       cursor: pointer;
-      box-shadow: 2px 2px 2px #333;
+      box-shadow: 2px 2px 6px #333;
       &:hover {
         transform: scale(1.01);
       }
@@ -641,10 +642,10 @@ html {
       width: inherit;
       height: 250px;
       padding: 0 12px;
-      border-radius: 0 0 6px 6px;
       position: relative;
       z-index: -10;
       scroll-snap-align: start;
+      border-radius: 0 0 6px 6px;
       h3,
       span {
         margin: 6px 0;

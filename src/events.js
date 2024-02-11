@@ -110,7 +110,7 @@ const Events = () => {
             </a>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-3 events-bg"></figure>
+                <figure className="f-1 events-bg"></figure>
               </div>
               <div className="description">
                 <h3>Marvelous Minis</h3>
@@ -121,7 +121,7 @@ const Events = () => {
             </a>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-1 events-bg"></figure>
+                <figure className="f-2 events-bg"></figure>
               </div>
               <div className="description">
                 <h3>Vacationing Care for Violets</h3>

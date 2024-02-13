@@ -241,13 +241,17 @@ html {
 }
 
 //Slider
-.App > .slider-parent {
-  position: relative;
-}
-.App > .stuck {
-  position: sticky;
-  top: -0.1px;
-  z-index: 1;
+.App {
+  .slider-parent {
+    position: relative;
+  }
+  .stuck {
+    position: sticky;
+    top: -0.1px;
+  }
+  > .erase {
+    z-index: -999;
+  }
 }
 .wrapper__slider {
   width: 100%;
@@ -405,14 +409,10 @@ html {
 
 //Meeting info
 .meeting-container {
-  height: 60vh;
-  min-height: 440px;
+  height: auto;
   width: 100%;
+  padding: 36px 0;
   background-color: #fff;
-  @include md {
-    min-height: 220px;
-    height: 40vh;
-  }
   .meeting {
     @include flexContainer(column, center, center);
     height: inherit;
@@ -511,6 +511,8 @@ html {
   height: 50vh;
   min-height: 640px;
   padding: 24px 0 36px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   background-color: #f7e8bd;
   position: relative;
   z-index: 10;
@@ -917,6 +919,7 @@ html {
 .footer {
   padding: 24px;
   background-color: #f9f7f4;
+  border-top: 1px solid #000;
   .footer-list-2 {
     // border-top: 1px solid #333;
     // @include xxl {

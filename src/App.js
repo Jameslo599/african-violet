@@ -1,13 +1,10 @@
 import "./App.scss";
-import logo from "./images/logo.png";
-import tx from "./images/lone-star.jpg";
 import MenuToClose from "./images/icons/menu-to-close";
 import Slider from "./slider";
 import Calendar from "./calendar";
 import Events from "./events";
 import Values from "./values";
 import Goals from "./goals";
-import Logo from "./logo-strip";
 import Sidebar from "./sidebar";
 import Meeting from "./meeting";
 
@@ -23,7 +20,6 @@ function App() {
       <Calendar />
       <Values />
       <Goals />
-      {/* <Logo /> */}
       <MyFooter />
     </div>
   );

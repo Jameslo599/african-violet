@@ -7,8 +7,10 @@ function Meeting() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
+        document.querySelector(".slider-parent").classList.add("erase");
       } else {
         entry.target.classList.remove("show");
+        document.querySelector(".slider-parent").classList.remove("erase");
       }
     });
   });

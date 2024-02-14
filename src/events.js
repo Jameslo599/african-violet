@@ -18,7 +18,10 @@ const Events = () => {
 
   const sticky = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (
+        entry.isIntersecting &&
+        navigator.userAgent.toLowerCase().indexOf("firefox") <= -1
+      ) {
         document.querySelector(".slider-parent").classList.add("stuck");
       } else {
         document.querySelector(".slider-parent").classList.remove("stuck");

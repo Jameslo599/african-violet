@@ -2,7 +2,7 @@
 
 This is a non-profit organization that celebrates the African Violet flower.
 
-**Link to project:** https://fnavsd.com/
+**Link to project:** https://fnavsd.org/
 
 ![portfolio website](/images/african-violet.webp)
 

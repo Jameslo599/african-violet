@@ -65,30 +65,6 @@ const Calendar = () => {
           <div className="calendar" ref={calendarRef}>
             <a className="event">
               <div className="calendar-item">
-                <figure className="f-1"></figure>
-              </div>
-              <div className="description">
-                <h3>First African Violet Society of Denton Show & Sale</h3>
-                <span>
-                  First Presbyterian Church, 1114 West University Denton, TX
-                </span>
-                <span>March 14 - 16, 2024</span>
-                <span className="italic">“Violets Take Over the World”</span>
-              </div>
-            </a>
-            <a className="event">
-              <div className="calendar-item">
-                <figure className="f-2"></figure>
-              </div>
-              <div className="description">
-                <h3>Dallas Metro AV Society Spring Sale</h3>
-                <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
-                <span>March 22-23, 2024</span>
-                <span>9 am – 4 pm</span>
-              </div>
-            </a>
-            <a className="event">
-              <div className="calendar-item">
                 <figure className="f-3"></figure>
               </div>
               <div className="description">

@@ -80,34 +80,12 @@ const Events = () => {
           <div className="calendar events event-calendar" ref={eventsRef}>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-1 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>Growing Exceptional Episcias</h3>
-                <span>Presented by Dale Martens via Zoom</span>
-                <span>February 5, 2024</span>
-                <span>Hostesses: Wendy Russell and Stuart Small</span>
-              </div>
-            </a>
-            <a className="travel">
-              <div className="calendar-item">
-                <figure className="f-2 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>Superior Soil</h3>
-                <span>Share your soil recipe and soil with members.</span>
-                <span>March 18, 2024</span>
-                <span>Hostesses: Cindy Branch and David Finley</span>
-              </div>
-            </a>
-            <a className="travel">
-              <div className="calendar-item">
                 <figure className="f-3 events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Those Proper Primulinas</h3>
+                <h3>The Basics of Growing Violets and Preparing for Show</h3>
                 <span>Presented by Ron Davidson</span>
-                <span>April 15, 2024</span>
+                <span>April 11, 2024</span>
                 <span>Host/Hostesses: Mike and Thelma Woodruff</span>
               </div>
             </a>
@@ -120,6 +98,39 @@ const Events = () => {
                 <span>Presented by Ann Athey</span>
                 <span>May 20, 2024</span>
                 <span>Host/Hostesses: Cathy Scheel and Stuart Small</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-2 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Program to be Determined</h3>
+                <span>TBA</span>
+                <span>September 16, 2024</span>
+                <span>Host/Hostesses: TBA</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-3 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Program to be Determined</h3>
+                <span>TBA</span>
+                <span>October 21, 2024</span>
+                <span>Host/Hostesses: TBA</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-1 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Program to be Determined</h3>
+                <span>TBA</span>
+                <span>November 18, 2024</span>
+                <span>Host/Hostesses: TBA</span>
               </div>
             </a>
           </div>

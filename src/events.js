@@ -96,7 +96,7 @@ const Events = () => {
               <div className="description">
                 <h3>Marvelous Minis</h3>
                 <span>Presented by Ann Athey</span>
-                <span>May 20, 2024</span>
+                <span>May 13, 2024</span>
                 <span>Host/Hostesses: Cathy Scheel and Stuart Small</span>
               </div>
             </a>
@@ -107,7 +107,7 @@ const Events = () => {
               <div className="description">
                 <h3>Program to be Determined</h3>
                 <span>TBA</span>
-                <span>September 16, 2024</span>
+                <span>September 9, 2024</span>
                 <span>Host/Hostesses: TBA</span>
               </div>
             </a>
@@ -118,7 +118,7 @@ const Events = () => {
               <div className="description">
                 <h3>Program to be Determined</h3>
                 <span>TBA</span>
-                <span>October 21, 2024</span>
+                <span>October 14, 2024</span>
                 <span>Host/Hostesses: TBA</span>
               </div>
             </a>
@@ -129,7 +129,7 @@ const Events = () => {
               <div className="description">
                 <h3>Program to be Determined</h3>
                 <span>TBA</span>
-                <span>November 18, 2024</span>
+                <span>November 11, 2024</span>
                 <span>Host/Hostesses: TBA</span>
               </div>
             </a>

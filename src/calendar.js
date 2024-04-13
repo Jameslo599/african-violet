@@ -127,6 +127,18 @@ const Calendar = () => {
                 <figure className="f-1"></figure>
               </div>
               <div className="description">
+                <h3>Fall African Violet and Gesneriad Sale</h3>
+                <span className="italic">North Haven Gardens</span>
+                <span>7700 Northaven Rd., Dallas, TX</span>
+                <span>September 20-21, 2024</span>
+                <span>9 am - 4 pm</span>
+              </div>
+            </a>
+            <a className="event">
+              <div className="calendar-item">
+                <figure className="f-2"></figure>
+              </div>
+              <div className="description">
                 <h3>Lone Star African Violet Society Convention</h3>
                 <span className="italic">Show and Sale</span>
                 <span>

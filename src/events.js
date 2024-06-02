@@ -80,28 +80,6 @@ const Events = () => {
           <div className="calendar events event-calendar" ref={eventsRef}>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-3 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>The Basics of Growing Violets and Preparing for Show</h3>
-                <span>Presented by Ron Davidson</span>
-                <span>April 11, 2024</span>
-                <span>Host/Hostesses: Mike and Thelma Woodruff</span>
-              </div>
-            </a>
-            <a className="travel">
-              <div className="calendar-item">
-                <figure className="f-1 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>Marvelous Minis</h3>
-                <span>Presented by Ann Athey</span>
-                <span>May 13, 2024</span>
-                <span>Host/Hostesses: Cathy Scheel and Stuart Small</span>
-              </div>
-            </a>
-            <a className="travel">
-              <div className="calendar-item">
                 <figure className="f-2 events-bg"></figure>
               </div>
               <div className="description">

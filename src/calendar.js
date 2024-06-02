@@ -68,52 +68,6 @@ const Calendar = () => {
                 <figure className="f-3"></figure>
               </div>
               <div className="description">
-                <h3>
-                  Moonlight African Violet and Gesneriad Society Plant Sale
-                </h3>
-                <span>
-                  Fort Worth Botanical Gardens, 3220 Botanic Garden Blvd., Fort
-                  Worth
-                </span>
-                <span>April 5, 2024, 2 pm - 6 pm</span>
-                <span>April 6, 2024, 9 am – 2 pm</span>
-              </div>
-            </a>
-            <a className="event">
-              <div className="calendar-item">
-                <figure className="f-1"></figure>
-              </div>
-              <div className="description">
-                <h3>AVSA National Convention</h3>
-                <span>
-                  DoubleTree Phoenix Tempe 2100 S. Priest Dr., Tempe, AZ 85282
-                </span>
-                <span>April 21 - 28, 2024</span>
-                <span className="italic">“Spirit of the Southwest”</span>
-              </div>
-            </a>
-            <a className="event">
-              <div className="calendar-item">
-                <figure className="f-2"></figure>
-              </div>
-              <div className="description">
-                <h3>
-                  Moonlight African Violet and Gesneriad Society Violet Display
-                  & Sale
-                </h3>
-                <span>
-                  Fort Worth Botanical Gardens, 3220 Botanic Garden Blvd., Fort
-                  Worth
-                </span>
-                <span>May 4, 2024</span>
-                <span>9 am – 4 pm</span>
-              </div>
-            </a>
-            <a className="event">
-              <div className="calendar-item">
-                <figure className="f-3"></figure>
-              </div>
-              <div className="description">
                 <h3>Summer Workshop</h3>
                 <span>
                   First Presbyterian Church 1114 West University, Denton, TX

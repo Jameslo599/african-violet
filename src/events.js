@@ -83,10 +83,10 @@ const Events = () => {
                 <figure className="f-2 events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Program to be Determined</h3>
-                <span>TBA</span>
+                <h3>Genetic Drift and Propagation</h3>
+                <span>presented by Diane Miller</span>
                 <span>September 9, 2024</span>
-                <span>Host/Hostesses: TBA</span>
+                <span>Hostesses: Mary Corondan and Suzanne Roberts</span>
               </div>
             </a>
             <a className="travel">
@@ -94,10 +94,10 @@ const Events = () => {
                 <figure className="f-3 events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Program to be Determined</h3>
-                <span>TBA</span>
-                <span>October 14, 2024</span>
-                <span>Host/Hostesses: TBA</span>
+                <h3>The Ten Propers – Violet Basics</h3>
+                <span>presented by David Finley</span>
+                <span>October 7, 2024</span>
+                <span>Host/Hostess: Cynthia Sudul and Karen Wyatt</span>
               </div>
             </a>
             <a className="travel">
@@ -105,10 +105,65 @@ const Events = () => {
                 <figure className="f-1 events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Program to be Determined</h3>
-                <span>TBA</span>
+                <h3>The Wee Ones</h3>
+                <span>presented by Mary Corondan and Sue Li</span>
                 <span>November 11, 2024</span>
-                <span>Host/Hostesses: TBA</span>
+                <span>Hostesses: Marilin Puig and Suzanne Roberts</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-2 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Constructing a Dish Garden</h3>
+                <span>presented by Suzanne Roberts</span>
+                <span>January 13, 2025</span>
+                <span>Hostesses: Sue Li and Mary Corondan</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-3 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>What's in Your Fertilizer?</h3>
+                <span>presented by Dr. Jeff Smith</span>
+                <span>February 10, 2025</span>
+                <span>Hostesses: Stuart Small and David Finley</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-1 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Pests: Meet and Defeat</h3>
+                <span>presented by Mary Corondan</span>
+                <span>March 10, 2025</span>
+                <span>Hostesses: Cindy Branch and Cathy Scheel</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-2 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Let's Make Violet Babies</h3>
+                <span>presented by Diane Miller and Suzanne Roberts</span>
+                <span>April 14, 2025</span>
+                <span>Host/Hostess: Mike and Thelma Woodruff</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="f-3 events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Leaf Bingo</h3>
+                <span>Members should bring leaves for Bingo prizes.</span>
+                <span>May 12, 2025</span>
+                <span>Hostesses: Sandy Fass and Diane Miller</span>
               </div>
             </a>
           </div>

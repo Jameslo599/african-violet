@@ -7,6 +7,8 @@ import Values from "./values";
 import Goals from "./goals";
 import Sidebar from "./sidebar";
 import Meeting from "./meeting";
+import logo from "./images/logo.png";
+import tx from "./images/lone-star.jpg";
 
 function App() {
   return (
@@ -76,11 +78,11 @@ function MyFooter() {
                 rel="noreferrer"
               >
                 AVSA
-                {/* <img src={logo} alt="national african violet society"></img> */}
+                <img src={logo} alt="national african violet society"></img>
               </a>
               <a href="https://lsavc.org/" target="_blank" rel="noreferrer">
                 LSAVC
-                {/* <img src={tx} alt="texas african violet society"></img> */}
+                <img src={tx} alt="texas african violet society"></img>
               </a>
               <span>
                 Developed by

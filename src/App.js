@@ -77,11 +77,9 @@ function MyFooter() {
                 target="_blank"
                 rel="noreferrer"
               >
-                AVSA
                 <img src={logo} alt="national african violet society"></img>
               </a>
               <a href="https://lsavc.org/" target="_blank" rel="noreferrer">
-                LSAVC
                 <img src={tx} alt="texas african violet society"></img>
               </a>
               <span>

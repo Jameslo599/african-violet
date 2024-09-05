@@ -71,7 +71,7 @@ const Calendar = () => {
                 <h3>Dallas Metro African Violet Society Fall Sale</h3>
                 <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
                 <span>September 20-21, 2024, 9 a.m.-4 p.m.</span>
-                <span className="italic">Demonstrations at 10 am and 2 pm</span>
+                <span className="italic">Demonstrations at 10am and 2pm</span>
               </div>
             </a>
             <a className="event">
@@ -83,7 +83,6 @@ const Calendar = () => {
                   Moonlight African Violet and Gesneriad Society Fall Sale
                 </h3>
                 <span className="italic">Fort Worth Botanical Gardens</span>
-                <span>7700 Northaven Rd., Dallas, TX</span>
                 <span>October 7, 2 p.m.–6 p.m.;</span>
                 <span>October 8, 9 a.m.-2 p.m.</span>
               </div>
@@ -101,7 +100,10 @@ const Calendar = () => {
                 </span>
                 <span>October 31 - November 2, 2024</span>
                 <span>
-                  For more information: <a href="lsavc.org">LSAVC</a>
+                  For more information:{" "}
+                  <a className="program-links" href="lsavc.org">
+                    LSAVC
+                  </a>
                 </span>
               </div>
             </a>
@@ -148,7 +150,12 @@ const Calendar = () => {
                 <span>May 25 – June 1, 2025</span>
                 <span>
                   For more information:{" "}
-                  <a href="africanvioletsocietyofamerica.org">AVSA</a>
+                  <a
+                    className="program-links"
+                    href="africanvioletsocietyofamerica.org"
+                  >
+                    AVSA
+                  </a>
                 </span>
               </div>
             </a>

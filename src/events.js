@@ -130,7 +130,7 @@ const Events = () => {
                 <h3>What's in Your Fertilizer?</h3>
                 <span>presented by Dr. Jeff Smith</span>
                 <span>February 10, 2025</span>
-                <span>Hostesses: Stuart Small and David Finley</span>
+                <span>Hosts: Stuart Small and David Finley</span>
               </div>
             </a>
             <a className="travel">

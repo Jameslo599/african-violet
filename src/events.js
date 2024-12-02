@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import ArrowRight from "./images/icons/arrow-right";
+import React, { useEffect, useRef } from 'react';
+import ArrowRight from './images/icons/arrow-right';
 
 //Horizontal photo calendar
 const Events = () => {
@@ -12,7 +12,7 @@ const Events = () => {
 
   useEffect(() => {
     bindEventHandler();
-    const container = document.querySelectorAll(".calendar-obs");
+    const container = document.querySelectorAll('.calendar-obs');
     container.forEach((e) => sticky.observe(e));
   }, []);
 
@@ -20,27 +20,27 @@ const Events = () => {
     entries.forEach((entry) => {
       if (
         entry.isIntersecting &&
-        navigator.userAgent.toLowerCase().indexOf("firefox") <= -1
+        navigator.userAgent.toLowerCase().indexOf('firefox') <= -1
       ) {
-        document.querySelector(".slider-parent").classList.add("stuck");
+        document.querySelector('.slider-parent').classList.add('stuck');
       } else {
-        document.querySelector(".slider-parent").classList.remove("stuck");
+        document.querySelector('.slider-parent').classList.remove('stuck');
       }
     });
   });
 
   const bindEventHandler = () => {
-    eventsRef.current.addEventListener("mousedown", mouseDown);
-    eventsRef.current.addEventListener("mouseleave", mouseLeave);
-    eventsRef.current.addEventListener("mouseup", mouseUp);
-    eventsRef.current.addEventListener("mousemove", mouseMove);
-    const items = document.querySelectorAll(".travel");
-    items.forEach((e) => e.addEventListener("click", jumpTo));
+    eventsRef.current.addEventListener('mousedown', mouseDown);
+    eventsRef.current.addEventListener('mouseleave', mouseLeave);
+    eventsRef.current.addEventListener('mouseup', mouseUp);
+    eventsRef.current.addEventListener('mousemove', mouseMove);
+    const items = document.querySelectorAll('.travel');
+    items.forEach((e) => e.addEventListener('click', jumpTo));
   };
   const mouseDown = (e) => {
     isMove = false;
     isDown = true;
-    eventsRef.current.classList.add("active");
+    eventsRef.current.classList.add('active');
     startX = e.pageX - eventsRef.current.offsetLeft;
     scrollLeft = eventsRef.current.scrollLeft;
     setTimeout(() => {
@@ -49,11 +49,11 @@ const Events = () => {
   };
   const mouseLeave = () => {
     isDown = false;
-    eventsRef.current.classList.remove("active");
+    eventsRef.current.classList.remove('active');
   };
   const mouseUp = () => {
     isDown = false;
-    eventsRef.current.classList.remove("active");
+    eventsRef.current.classList.remove('active');
   };
   const mouseMove = (e) => {
     if (!isDown) return;
@@ -65,7 +65,7 @@ const Events = () => {
   const jumpTo = (e) => {
     if (isMove) return;
     isMove = false;
-    eventsRef.current.scrollLeft = e.target.closest("a").offsetLeft - 40;
+    eventsRef.current.scrollLeft = e.target.closest('a').offsetLeft - 40;
   };
 
   return (
@@ -78,39 +78,6 @@ const Events = () => {
         </div>
         <div>
           <div className="calendar events event-calendar" ref={eventsRef}>
-            <a className="travel">
-              <div className="calendar-item">
-                <figure className="f-2 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>Genetic Drift and Propagation</h3>
-                <span>presented by Diane Miller</span>
-                <span>September 9, 2024</span>
-                <span>Hostesses: Mary Corondan and Suzanne Roberts</span>
-              </div>
-            </a>
-            <a className="travel">
-              <div className="calendar-item">
-                <figure className="f-3 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>The Ten Propers – Violet Basics</h3>
-                <span>presented by David Finley</span>
-                <span>October 7, 2024</span>
-                <span>Host/Hostess: Cynthia Sudul and Karen Wyatt</span>
-              </div>
-            </a>
-            <a className="travel">
-              <div className="calendar-item">
-                <figure className="f-1 events-bg"></figure>
-              </div>
-              <div className="description">
-                <h3>The Wee Ones</h3>
-                <span>presented by Mary Corondan and Sue Li</span>
-                <span>November 11, 2024</span>
-                <span>Hostesses: Marilin Puig and Suzanne Roberts</span>
-              </div>
-            </a>
             <a className="travel">
               <div className="calendar-item">
                 <figure className="f-2 events-bg"></figure>

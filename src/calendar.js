@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import ArrowRight from "./images/icons/arrow-right";
+import React, { useEffect, useRef } from 'react';
+import ArrowRight from './images/icons/arrow-right';
 
 //Horizontal photo calendar
 const Calendar = () => {
@@ -15,17 +15,17 @@ const Calendar = () => {
   }, []);
 
   const bindEventHandler = () => {
-    calendarRef.current.addEventListener("mousedown", mouseDown);
-    calendarRef.current.addEventListener("mouseleave", mouseLeave);
-    calendarRef.current.addEventListener("mouseup", mouseUp);
-    calendarRef.current.addEventListener("mousemove", mouseMove);
-    const items = document.querySelectorAll(".event");
-    items.forEach((e) => e.addEventListener("click", jumpTo));
+    calendarRef.current.addEventListener('mousedown', mouseDown);
+    calendarRef.current.addEventListener('mouseleave', mouseLeave);
+    calendarRef.current.addEventListener('mouseup', mouseUp);
+    calendarRef.current.addEventListener('mousemove', mouseMove);
+    const items = document.querySelectorAll('.event');
+    items.forEach((e) => e.addEventListener('click', jumpTo));
   };
   const mouseDown = (e) => {
     isMove = false;
     isDown = true;
-    calendarRef.current.classList.add("active");
+    calendarRef.current.classList.add('active');
     startX = e.pageX - calendarRef.current.offsetLeft;
     scrollLeft = calendarRef.current.scrollLeft;
     setTimeout(() => {
@@ -34,11 +34,11 @@ const Calendar = () => {
   };
   const mouseLeave = () => {
     isDown = false;
-    calendarRef.current.classList.remove("active");
+    calendarRef.current.classList.remove('active');
   };
   const mouseUp = () => {
     isDown = false;
-    calendarRef.current.classList.remove("active");
+    calendarRef.current.classList.remove('active');
   };
   const mouseMove = (e) => {
     if (!isDown) return;
@@ -50,7 +50,7 @@ const Calendar = () => {
   const jumpTo = (e) => {
     if (isMove) return;
     isMove = false;
-    calendarRef.current.scrollLeft = e.target.closest("a").offsetLeft - 40;
+    calendarRef.current.scrollLeft = e.target.closest('a').offsetLeft - 40;
   };
 
   return (
@@ -63,50 +63,6 @@ const Calendar = () => {
         </div>
         <div>
           <div className="calendar" ref={calendarRef}>
-            <a className="event">
-              <div className="calendar-item">
-                <figure className="f-3"></figure>
-              </div>
-              <div className="description">
-                <h3>Dallas Metro African Violet Society Fall Sale</h3>
-                <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
-                <span>September 20-21, 2024, 9 a.m.-4 p.m.</span>
-                <span className="italic">Demonstrations at 10am and 2pm</span>
-              </div>
-            </a>
-            <a className="event">
-              <div className="calendar-item">
-                <figure className="f-1"></figure>
-              </div>
-              <div className="description">
-                <h3>
-                  Moonlight African Violet and Gesneriad Society Fall Sale
-                </h3>
-                <span className="italic">Fort Worth Botanical Gardens</span>
-                <span>October 7, 2 p.m.–6 p.m.;</span>
-                <span>October 8, 9 a.m.-2 p.m.</span>
-              </div>
-            </a>
-            <a className="event">
-              <div className="calendar-item">
-                <figure className="f-2"></figure>
-              </div>
-              <div className="description">
-                <h3>Lone Star African Violet Council Convention</h3>
-                <span className="italic">Viva las Violetas</span>
-                <span>
-                  DoubleTree by Hilton Hotel 1981 N. Central Expy., Richardson,
-                  TX
-                </span>
-                <span>October 31 - November 2, 2024</span>
-                <span>
-                  For more information:{" "}
-                  <a className="program-links" href="lsavc.org">
-                    LSAVC
-                  </a>
-                </span>
-              </div>
-            </a>
             <a className="event">
               <div className="calendar-item">
                 <figure className="f-3"></figure>
@@ -149,7 +105,7 @@ const Calendar = () => {
                 </span>
                 <span>May 25 – June 1, 2025</span>
                 <span>
-                  For more information:{" "}
+                  For more information:{' '}
                   <a
                     className="program-links"
                     href="africanvioletsocietyofamerica.org"

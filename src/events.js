@@ -85,7 +85,7 @@ const Events = () => {
               <div className="description">
                 <h3>Constructing a Dish Garden</h3>
                 <span>presented by Suzanne Roberts</span>
-                <span>January 13, 2025</span>
+                <span>January 20, 2025</span>
                 <span>Hostesses: Sue Li and Mary Corondan</span>
               </div>
             </a>
@@ -118,7 +118,7 @@ const Events = () => {
               <div className="description">
                 <h3>Let's Make Violet Babies</h3>
                 <span>presented by Diane Miller and Suzanne Roberts</span>
-                <span>April 14, 2025</span>
+                <span>April 21, 2025</span>
                 <span>Host/Hostess: Mike and Thelma Woodruff</span>
               </div>
             </a>

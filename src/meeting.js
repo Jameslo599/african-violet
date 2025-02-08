@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 
 function Meeting() {
   const textRef = useRef(null);
@@ -6,18 +6,18 @@ function Meeting() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        document.querySelector(".slider-parent").classList.add("erase");
+        entry.target.classList.add('show');
+        document.querySelector('.slider-parent').classList.add('erase');
       } else {
-        entry.target.classList.remove("show");
-        document.querySelector(".slider-parent").classList.remove("erase");
+        entry.target.classList.remove('show');
+        document.querySelector('.slider-parent').classList.remove('erase');
       }
     });
   });
 
   useEffect(() => {
     if (textRef.current) {
-      const children = textRef.current.querySelectorAll(".hidden");
+      const children = textRef.current.querySelectorAll('.hidden');
       children.forEach((e) => observer.observe(e));
     }
   }, []);
@@ -27,14 +27,14 @@ function Meeting() {
       <div className="meeting" ref={textRef}>
         <h3 className="hidden">Meeting Information</h3>
         <span className="contact hidden">
-          Email:{" "}
+          Email:{' '}
           <a href="mailto:first.nighter.avs@gmail.com">
             first.nighter.avs@gmail.com
           </a>
         </span>
         <div className="schedule">
           <div className="hidden">
-            <span>Every Second Saturday</span>
+            <span>Dates as Listed Above</span>
             <span>January - May</span>
             <span>September - November</span>
           </div>

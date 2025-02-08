@@ -105,10 +105,12 @@ const Calendar = () => {
                 </span>
                 <span>May 25 – June 1, 2025</span>
                 <span>
-                  For more information:{' '}
+                  For more information:
                   <a
                     className="program-links"
-                    href="africanvioletsocietyofamerica.org"
+                    href="https://africanvioletsocietyofamerica.org/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     AVSA
                   </a>

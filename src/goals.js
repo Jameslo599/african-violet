@@ -1,4 +1,4 @@
-import CheckboxBtn from "./images/icons/checkbox-btn";
+import CheckboxBtn from './images/icons/checkbox-btn';
 
 //List of club goals for the year
 const Goals = () => {
@@ -6,7 +6,7 @@ const Goals = () => {
     <div className="goals-container nav" id="goals">
       <div className="goals">
         <ul>
-          <h3>2023-2024 Milestones</h3>
+          <h3>2024-2025 Milestones</h3>
           <li>
             <span className="ibm">01.</span>
             <span> Donate to Boyce Eden’s Fund.</span>

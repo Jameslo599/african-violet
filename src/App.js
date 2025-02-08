@@ -1,14 +1,14 @@
-import "./App.scss";
-import MenuToClose from "./images/icons/menu-to-close";
-import Slider from "./slider";
-import Calendar from "./calendar";
-import Events from "./events";
-import Values from "./values";
-import Goals from "./goals";
-import Sidebar from "./sidebar";
-import Meeting from "./meeting";
-import logo from "./images/logo.png";
-import tx from "./images/lone-star.jpg";
+import './App.scss';
+import MenuToClose from './images/icons/menu-to-close';
+import Slider from './slider';
+import Calendar from './calendar';
+import Events from './events';
+import Values from './values';
+import Goals from './goals';
+import Sidebar from './sidebar';
+import Meeting from './meeting';
+import logo from './images/logo.png';
+import tx from './images/lone-star.jpg';
 
 function App() {
   return (
@@ -94,7 +94,7 @@ function MyFooter() {
               </span>
             </div>
             <p>
-              © 2024 First Nighter <span>African Violet Society of Dallas</span>
+              © 2025 First Nighter <span>African Violet Society of Dallas</span>
             </p>
           </div>
         </div>

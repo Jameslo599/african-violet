@@ -65,18 +65,12 @@ const Calendar = () => {
           <div className="calendar" ref={calendarRef}>
             <a className="event">
               <div className="calendar-item">
-                <figure className="f-3"></figure>
+                <figure className="flyer"></figure>
               </div>
               <div className="description">
-                <h3>
-                  First African Violet Society of Denton Show & Sale First
-                  Nighter African Violet Society Show
-                </h3>
-                <span className="italic">Denton Celebrates 50 Years</span>
-                <span>
-                  First Presbyterian Church, 1114 West University, Denton
-                </span>
-                <span>March 13 - 15, 2025</span>
+                <h3>Dallas Metro African Violet Society Fall Sale</h3>
+                <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
+                <span>September 19-20, 2025, 9 a.m. - 4 p.m. daily</span>
               </div>
             </a>
             <a className="event">
@@ -84,35 +78,59 @@ const Calendar = () => {
                 <figure className="f-1"></figure>
               </div>
               <div className="description">
-                <h3>Dallas Metro African Violet Society Spring Sale</h3>
-                <span className="italic">
-                  Demonstrations at 10 am and 2 pm daily
+                <h3>Moonlight African Violet & Gesneriad Society Fall Sale</h3>
+                <span>
+                  Fort Worth Botanic Garden, The Groves, 3220 Botanic Garden
+                  Blvd, Fort Worth
                 </span>
-                <span>North Haven Gardens, 7700 Northaven Rd., Dallas</span>
-                <span>March 21 - 22, 2025, 9 am – 4 pm</span>
+                <span>
+                  October 3, 2 p.m. - 6 p.m. <br /> October 4, 2025, 9 am. - 2
+                  p.m.
+                </span>
               </div>
             </a>
             <a className="event">
               <div className="calendar-item">
-                <figure className="f-2"></figure>
+                <figure className="lone"></figure>
               </div>
               <div className="description">
-                <h3>AVSA National Convention</h3>
-                <span className="italic">Violets are Worlds of Fun</span>
+                <h3>Moonlight African Violet & Gesneriad Society Fall Sale</h3>
+                <span className="italic">Cheers to 50 Years!</span>
                 <span>
-                  DoubleTree Kansas City – Overland Park 10100 College Blvd.,
-                  Overland Park, KS 66210
+                  DoubleTree Hotel by Hilton Hotel Houston Intercontinental
+                  Airport, 15747 JFK Blvd., Houston
                 </span>
-                <span>May 25 – June 1, 2025</span>
+                <span>October 30 - November 1, 2025</span>
                 <span>
-                  For more information:
                   <a
                     className="program-links"
-                    href="https://africanvioletsocietyofamerica.org/"
+                    href="https://lsavc.org/"
                     target="_blank"
-                    rel="noreferrer"
                   >
-                    AVSA
+                    lsavc.org
+                  </a>
+                </span>
+              </div>
+            </a>
+            <a className="event">
+              <div className="calendar-item">
+                <figure className="f-1"></figure>
+              </div>
+              <div className="description">
+                <h3>
+                  First African Violet Society of Denton Plant Sale and Display
+                </h3>
+                <span>
+                  First Presbyterian Church, 1114 West University Drive, Denton
+                </span>
+                <span>
+                  For more information, go to{' '}
+                  <a
+                    className="program-links"
+                    href="https://favsd.org/"
+                    target="_blank"
+                  >
+                    favsd.org
                   </a>
                 </span>
               </div>
@@ -122,11 +140,55 @@ const Calendar = () => {
                 <figure className="f-2"></figure>
               </div>
               <div className="description">
-                <h3>Summer Workshop</h3>
-                <span className="italic">First Presbyterian Church</span>
-                <span>1114 West University, Denton</span>
-                <span>June 21, 2025, 9 am – 3 pm</span>
-                <span>Bring a potluck dish to share.</span>
+                <h3>
+                  Dallas Metro African Violet Society Spring Sale and Mini Show,
+                  North Haven Gardens
+                </h3>
+                <span>7700 Northaven Rd., Dallas</span>
+                <span>March 20-21, 2026, 9 a.m. - 4 p.m. daily</span>
+              </div>
+            </a>
+            <a className="event">
+              <div className="calendar-item">
+                <figure className="f-3"></figure>
+              </div>
+              <div className="description">
+                <h3>
+                  Moonlight African Violet and Gesneriad Society Plant Sale
+                </h3>
+                <span>
+                  Fort Worth Botanic Garden Building, 3220 Botanic Garden Blvd,
+                  Fort Worth
+                </span>
+                <span>
+                  {' '}
+                  April 3, 2 p.m. - 6 p.m. <br /> April 4, 9 am. - 2 p.m.
+                </span>
+              </div>
+            </a>
+            <a className="event">
+              <div className="calendar-item">
+                <figure className="save"></figure>
+              </div>
+              <div className="description">
+                <h3>AVSA National Convention</h3>
+                <span className="italic">Violets are Texas Stars</span>
+                <span>
+                  Renaissance Dallas North Hotel, 1590 Lyndon B. Johnson Fwy.,
+                  Dallas
+                </span>
+                <span>May 25 – 30, 2026</span>
+                <span>
+                  For more information, go to{' '}
+                  <a
+                    className="program-links"
+                    href="https://africanvioletsocietyofamerica.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    avsa.org
+                  </a>
+                </span>
               </div>
             </a>
           </div>

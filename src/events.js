@@ -75,62 +75,99 @@ const Events = () => {
           <h2>
             Hosted Programs <ArrowRight />
           </h2>
+          <p>
+            The public is cordially invited to attend our meetings where we
+            share friendships, violets, gesneriads, and educational information.
+          </p>
         </div>
         <div>
           <div className="calendar events event-calendar" ref={eventsRef}>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-2 events-bg"></figure>
+                <figure className="leaf events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Constructing a Dish Garden</h3>
-                <span>presented by Suzanne Roberts</span>
-                <span>January 20, 2025</span>
-                <span>Hostesses: Sue Li and Mary Corondan</span>
+                <h3>Separating Violet Babies from Mother Leaf</h3>
+                <span>presented by Diane Miller</span>
+                <span>September 8, 2025</span>
+                <span>Hostesses: Cynthia Sudul and Karen Wyatt</span>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-3 events-bg"></figure>
+                <figure className="episca events-bg"></figure>
               </div>
               <div className="description">
-                <h3>What's in Your Fertilizer?</h3>
-                <span>presented by Dr. Jeff Smith</span>
-                <span>February 10, 2025</span>
-                <span>Hosts: Stuart Small and David Finley</span>
+                <h3>Growing Episcias</h3>
+                <span>presented by Amber Kirk</span>
+                <span>October 13, 2025</span>
+                <span>Hostesses: Mary Corondan and Suzanne Roberts</span>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-1 events-bg"></figure>
+                <figure className="alps events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Pests: Meet and Defeat</h3>
+                <h3>Growing for Show</h3>
                 <span>presented by Mary Corondan</span>
-                <span>March 10, 2025</span>
+                <span>November 17, 2025</span>
+                <span>Hostesses: Marilin Puig and Vickie Portch</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="cajun events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Mini Violets, Favorite Things</h3>
+                <span>presented by Carol Vaughan</span>
+                <span>January 12, 2026</span>
+                <span>Hosts: Larry Brock and David Finley</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="led events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>LED Lighting for Violets</h3>
+                <span>presented by Dr. Minh Bui</span>
+                <span>February 9, 2026</span>
+                <span>Hostesses: Sue Li and Carol Vaughan</span>
+              </div>
+            </a>
+            <a className="travel">
+              <div className="calendar-item">
+                <figure className="flower events-bg"></figure>
+              </div>
+              <div className="description">
+                <h3>Stress Free Strep Growing</h3>
+                <span>presented by Diane Miller</span>
+                <span>March 9, 2026</span>
                 <span>Hostesses: Cindy Branch and Cathy Scheel</span>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-2 events-bg"></figure>
+                <figure className="rob events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Let's Make Violet Babies</h3>
-                <span>presented by Diane Miller and Suzanne Roberts</span>
-                <span>April 21, 2025</span>
-                <span>Host/Hostess: Mike and Thelma Woodruff</span>
+                <h3>Decapitating and Potting from a Neck</h3>
+                <span>presented by Suzanne Roberts</span>
+                <span>April 13, 2026</span>
+                <span>Hostesses, Sandy Fass and Diane Miller</span>
               </div>
             </a>
             <a className="travel">
               <div className="calendar-item">
-                <figure className="f-3 events-bg"></figure>
+                <figure className="bingo events-bg"></figure>
               </div>
               <div className="description">
-                <h3>Leaf Bingo</h3>
-                <span>Members should bring leaves for Bingo prizes.</span>
-                <span>May 12, 2025</span>
-                <span>Hostesses: Sandy Fass and Diane Miller</span>
+                <h3>Leaf Bingo and AVSA Convention</h3>
+                <span>presented by Dr. Minh Bui</span>
+                <span>May 11, 2026</span>
+                <span>Host/Hostess: Mike and Thelma Woodruff</span>
               </div>
             </a>
           </div>

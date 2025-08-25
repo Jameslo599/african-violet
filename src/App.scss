@@ -509,7 +509,7 @@ html {
   @include flexContainer(column, center, flex-start);
   width: 100%;
   height: 50vh;
-  min-height: 640px;
+  min-height: fit-content;
   padding: 24px 0 36px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -609,6 +609,39 @@ html {
       .f-3 {
         background-image: url(./images/calendar3.webp);
       }
+      .leaf {
+        background-image: url(./images/leaf.jpg);
+      }
+      .alps {
+        background-image: url(./images/alps.jpg);
+      }
+      .bingo {
+        background-image: url(./images/bingo.jpg);
+      }
+      .cajun {
+        background-image: url(./images/cajun-2019.jpg);
+      }
+      .flower {
+        background-image: url(./images/flower.JPG);
+      }
+      .led {
+        background-image: url(./images/led-violet.png);
+      }
+      .rob {
+        background-image: url(./images/rob.jpg);
+      }
+      .episca {
+        background-image: url(./images/episca.jpg);
+      }
+      .lone {
+        background-image: url(./images/2025-lone.jpg);
+      }
+      .save {
+        background-image: url(./images/save-date.jpg);
+      }
+      .flyer {
+        background-image: url(./images/fall-flyer.jpg);
+      }
       figure {
         background-size: cover;
         position: absolute;
@@ -682,6 +715,16 @@ html {
   }
   .events {
     background-color: inherit;
+    p {
+      padding: 12px 24px;
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: 1.15rem;
+      @include xl {
+        max-width: 1440px;
+        padding: 12px 0;
+      }
+    }
   }
   .calendar {
     .calendar-item {

@@ -34,7 +34,7 @@ function Meeting() {
         </span>
         <div className="schedule">
           <div className="hidden">
-            <span>Dates as Listed Above</span>
+            <span>Every Second Monday or as listed</span>
             <span>January - May</span>
             <span>September - November</span>
           </div>
@@ -53,7 +53,7 @@ function Meeting() {
         </div>
         <div className="schedule-wide hidden">
           <div>
-            <span>Every Second Saturday</span>
+            <span>Every Second Monday or as listed</span>
             <span>January - May</span>
             <span>September - November</span>
           </div>

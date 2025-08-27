@@ -94,7 +94,7 @@ const Calendar = () => {
                 <figure className="lone"></figure>
               </div>
               <div className="description">
-                <h3>Moonlight African Violet & Gesneriad Society Fall Sale</h3>
+                <h3>Lone Star African Violet Council</h3>
                 <span className="italic">Cheers to 50 Years!</span>
                 <span>
                   DoubleTree Hotel by Hilton Hotel Houston Intercontinental
@@ -123,6 +123,7 @@ const Calendar = () => {
                 <span>
                   First Presbyterian Church, 1114 West University Drive, Denton
                 </span>
+                <span>March 13 - 14, 2026</span>
                 <span>
                   For more information, go to{' '}
                   <a

@@ -508,8 +508,8 @@ html {
 .calendar-container {
   @include flexContainer(column, center, flex-start);
   width: 100%;
+  min-height: 700px;
   height: 50vh;
-  min-height: fit-content;
   padding: 24px 0 36px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -635,15 +635,20 @@ html {
       }
       .lone {
         background-image: url(./images/2025-lone.jpg);
+        background-size: contain;
       }
       .save {
         background-image: url(./images/save-date.jpg);
+        background-size: contain;
       }
       .flyer {
         background-image: url(./images/fall-flyer.jpg);
+        background-size: contain;
       }
       figure {
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -709,6 +714,7 @@ html {
 
 //Hosted Programs
 .events-container {
+  min-height: 700px;
   background-color: #f8ebda;
   > div {
     background-color: inherit;
@@ -720,7 +726,7 @@ html {
       margin: 0 auto;
       font-weight: bold;
       font-size: 1.15rem;
-      @include xl {
+      @include xxl {
         max-width: 1440px;
         padding: 12px 0;
       }
